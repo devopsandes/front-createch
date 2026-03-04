@@ -6,6 +6,7 @@ import { ParticlesBackground } from "./components/ParticlesBackground";
 import { HeroTypewriter } from "./components/HeroTypewriter";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { PainPointsCarousel } from "./components/PainPointsCarousel";
 import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Home() {
@@ -17,42 +18,42 @@ export default function Home() {
 
       <ParticlesBackground />
       {/* Main Content Area */}
-      <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 shrink h-[58vh] relative z-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 items-center h-full max-h-[500px]">
+      <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 relative z-20 py-12 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center w-full max-w-[1400px] mx-auto h-full">
           {/* Left Hero Text */}
           <div className="flex flex-col h-full justify-center">
-            <h1 className="text-4xl md:text-5xl lg:text-[4rem] xl:text-[4.5rem] font-bold leading-[1.1] tracking-tight text-white mb-12 min-h-[160px] lg:min-h-[220px] flex items-center">
+            <h1 className="text-4xl md:text-5xl lg:text-[4.5rem] xl:text-[5rem] font-bold leading-[1.05] tracking-tight text-white min-h-[160px] lg:min-h-[220px] mb-8 lg:mb-16 flex items-center">
               <HeroTypewriter />
             </h1>
           </div>
 
           {/* Right Text */}
-          <div className="flex flex-col space-y-4 lg:pl-16 relative">
-            <div className="absolute left-0 lg:left-16 top-0 w-full lg:w-[calc(100%-4rem)] h-[3px] bg-gradient-to-r from-blue-600 to-red-600"></div>
+          <div className="flex flex-col space-y-5 lg:pl-10 relative w-full pt-4 lg:pt-0">
+            <div className="absolute left-0 lg:left-10 top-0 w-[60%] lg:w-[75%] h-[3px] bg-gradient-to-r from-blue-600 to-red-600"></div>
 
-            <div className="pt-6 text-gray-300 flex flex-col gap-3 font-sans">
-              <p className="text-[1.05rem] font-bold text-white mb-1">
+            <div className="pt-6 text-gray-300 flex flex-col gap-3 font-sans w-full">
+              <p className="text-xl md:text-2xl font-bold text-white tracking-wide leading-snug">
                 {t.hero.description.intro}
               </p>
 
-              <ul className="list-disc list-inside text-[0.95rem] text-gray-400 space-y-1 ml-1 marker:text-blue-500">
-                {t.hero.description.painPoints.map((point: string, idx: number) => (
-                  <li key={idx} className="leading-snug">{point}</li>
-                ))}
-              </ul>
+              <div className="my-2">
+                <PainPointsCarousel key={t.hero.description.intro} points={t.hero.description.painPoints} />
+              </div>
 
-              <p className="text-[0.95rem] leading-relaxed mt-2 text-gray-300">
-                {t.hero.description.p1}
-              </p>
-              <p className="text-[0.95rem] leading-relaxed text-gray-400">
-                {t.hero.description.p2}
-              </p>
+              <div className="flex flex-col space-y-3 border-l-2 border-blue-600/50 pl-4 md:pl-5 mt-2">
+                <p className="text-base md:text-[1.05rem] leading-relaxed text-gray-300">
+                  {t.hero.description.p1}
+                </p>
+                <p className="text-base md:text-[1.05rem] leading-relaxed text-gray-400">
+                  {t.hero.description.p2}
+                </p>
+              </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-4">
               <Link href="/lo-que-hacemos" className="flex items-center w-max text-[13px] font-bold uppercase tracking-wide hover:opacity-80 transition-opacity">
                 <span className="mr-4">{t.hero.btn}</span>
-                <span className="bg-gradient-to-br from-blue-600 to-red-600 w-8 h-8 flex items-center justify-center">
+                <span className="bg-gradient-to-br from-blue-600 to-red-600 w-8 h-8 flex items-center justify-center shadow-lg shadow-red-500/20">
                   <ChevronRight className="w-5 h-5 text-white" />
                 </span>
               </Link>
