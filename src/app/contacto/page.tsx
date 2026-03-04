@@ -27,7 +27,7 @@ export default function Contacto() {
 
         try {
             const response = await fetch(
-                `${process.env.NEXT_PUBLIC_API_URL}/api/contacto`,
+                `https://bootcamp.createch.com.ar/api/contacto`,
                 {
                     method: "POST",
                     headers: {
