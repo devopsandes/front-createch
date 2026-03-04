@@ -26,13 +26,17 @@ export default function Contacto() {
         setMessage({ type: "", text: "" });
 
         try {
-            const response = await fetch("bootcamp.createch.com.ar/api/contacto", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
+            const response = await fetch(
+                `${process.env.NEXT_PUBLIC_API_URL}/api/contacto`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                }
+            );
+
 
             const data = await response.json();
 
