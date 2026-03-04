@@ -58,9 +58,7 @@ export const dictionaries = {
         quienesSomos: {
             tag: "QUIÉNES SOMOS",
             title: "Estrategia, tecnología y experiencia aplicada.",
-            p1: "Somos una empresa especializada en optimización de procesos mediante IA. Trabajamos sobre el núcleo operativo de las organizaciones: ventas, atención al cliente, cobranzas y gestión interna. Intervenimos donde la eficiencia impacta directamente en los resultados.",
-            p2: "Fusionamos experiencia en entornos corporativos con capacidad técnica para desarrollar, integrar y escalar soluciones en tiempos ágiles.",
-            p3: "Nuestro enfoque es claro: transformar operaciones en estructuras eficientes, medibles y listas para crecer."
+            description: "Somos una empresa especializada en optimización de procesos mediante IA. Trabajamos sobre el núcleo operativo de las organizaciones: ventas, atención al cliente, cobranzas y gestión interna. Intervenimos donde la eficiencia impacta directamente en los resultados. Fusionamos experiencia en entornos corporativos con capacidad técnica para desarrollar, integrar y escalar soluciones en tiempos ágiles. Nuestro enfoque es claro: transformar operaciones en estructuras eficientes, medibles y listas para crecer."
         },
         footer: {
             rights: "© 2026 Createch. Todos los derechos reservados."
