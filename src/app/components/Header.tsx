@@ -35,18 +35,18 @@ export function Header() {
             </Link>
 
             <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 justify-center items-center gap-8 text-lg lg:text-xl font-medium w-max mt-4">
-                <button className={getLinkStyle("/lo-que-hacemos")}>
+                <Link href="/lo-que-hacemos" className={getLinkStyle("/lo-que-hacemos")}>
                     {t.nav.whatWeDo}
-                </button>
+                </Link>
                 <Link href="/contacto" className={getLinkStyle("/contacto")}>
                     {t.nav.contact}
                 </Link>
-                <button className={getLinkStyle("/quienes-somos")}>
+                <Link href="/quienes-somos" className={getLinkStyle("/quienes-somos")}>
                     {t.nav.about}
-                </button>
-                <button className={getLinkStyle("/nuestros-trabajos")}>
+                </Link>
+                <Link href="/nuestros-trabajos" className={getLinkStyle("/nuestros-trabajos")}>
                     {t.nav.ourWork}
-                </button>
+                </Link>
             </div>
 
             {/* Right Section: Actions */}

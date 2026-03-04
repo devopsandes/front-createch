@@ -36,11 +36,11 @@ export default function Home() {
                 {t.hero.description.intro}
               </p>
 
-              <div className="my-2">
+              <div className="mb-0">
                 <PainPointsCarousel key={t.hero.description.intro} points={t.hero.description.painPoints} />
               </div>
 
-              <div className="flex flex-col space-y-3 border-l-2 border-blue-600/50 pl-4 md:pl-5 mt-2">
+              <div className="flex flex-col space-y-3 mt-0">
                 <p className="text-base md:text-[1.05rem] leading-relaxed text-gray-300">
                   {t.hero.description.p1}
                 </p>
@@ -89,10 +89,11 @@ export default function Home() {
         </Link>
 
         {/* Card 4 (Blue) */}
-        <Link href="/quienes-somos" className="bg-gradient-to-br from-[#0e1c38] to-black text-white p-5 flex flex-col justify-between group cursor-pointer border-t-[3px] border-transparent hover:border-blue-600 transition-all relative overflow-hidden h-full rounded-sm block">
+        {/* Card 4 (Blue) */}
+        <Link href="/nuestros-trabajos" className="bg-gradient-to-br from-[#0e1c38] to-black text-white p-5 flex flex-col justify-between group cursor-pointer border-t-[3px] border-transparent hover:border-blue-600 transition-all relative overflow-hidden h-full rounded-sm block">
           <div className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase">{t.cards.tag.puntoDeVista}</div>
-          <h3 className="text-base md:text-lg font-bold leading-snug group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-            {t.cards.c4}
+          <h3 className="text-base md:text-lg font-bold leading-snug group-hover:translate-x-1 transition-transform duration-300 flex items-center gap-2">
+            {t.cards.viewWork} <span className="group-hover:translate-x-1 transition-transform">→</span>
           </h3>
         </Link>
       </div>

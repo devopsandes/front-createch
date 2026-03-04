@@ -33,18 +33,34 @@ export const dictionaries = {
         },
         cards: {
             tag: {
-                estudio: "Estudio",
-                puntoDeVista: "Punto de vista"
+                estudio: "Notas",
+                puntoDeVista: "Lo que hacemos"
             },
             c1: "Reinvención en la era de la IA generativa",
             c2: "Technology Vision 2025",
             c3: "Accenture Life Trends 2025",
-            c4: "IA para todos"
+            c4: "IA para todos",
+            viewWork: "Conoce nuestro trabajo"
+        },
+        loQueHacemos: {
+            tag: "LO QUE HACEMOS",
+            title: "Soluciones digitales para problemas reales.",
+            p1: "Antes de escribir una línea de código, entendemos el negocio. Cada proyecto comienza con un diagnóstico estratégico que nos permite detectar oportunidades reales de optimización.",
+            p2: "A partir de allí implementamos soluciones concretas:",
+            bullets: [
+                "Automatización inteligente de procesos operativos.",
+                "Chatbots y sistemas de atención al cliente con IA.",
+                "Implementación y optimización de CRM.",
+                "Sistemas de gestión y cobranza.",
+                "Desarrollo de software a medida e integración de herramientas existentes."
+            ]
         },
         quienesSomos: {
-            tag: "NUESTRA ESENCIA",
-            title: "Quiénes somos",
-            description: "En Createch, somos un equipo apasionado por la tecnología y la innovación. Nos especializamos en transformar la manera en que las empresas operan, utilizando inteligencia artificial y soluciones de software a medida para escalar resultados y lograr una gestión inteligente."
+            tag: "QUIÉNES SOMOS",
+            title: "Estrategia, tecnología y experiencia aplicada.",
+            p1: "Somos una empresa especializada en optimización de procesos mediante IA. Trabajamos sobre el núcleo operativo de las organizaciones: ventas, atención al cliente, cobranzas y gestión interna. Intervenimos donde la eficiencia impacta directamente en los resultados.",
+            p2: "Fusionamos experiencia en entornos corporativos con capacidad técnica para desarrollar, integrar y escalar soluciones en tiempos ágiles.",
+            p3: "Nuestro enfoque es claro: transformar operaciones en estructuras eficientes, medibles y listas para crecer."
         },
         footer: {
             rights: "© 2026 Createch. Todos los derechos reservados."
@@ -84,13 +100,27 @@ export const dictionaries = {
         },
         cards: {
             tag: {
-                estudio: "Study",
-                puntoDeVista: "Point of view"
+                estudio: "Notes",
+                puntoDeVista: "What we do"
             },
             c1: "Reinvention in the era of generative AI",
             c2: "Technology Vision 2025",
             c3: "Accenture Life Trends 2025",
-            c4: "AI for everyone"
+            c4: "AI for everyone",
+            viewWork: "View our work"
+        },
+        loQueHacemos: {
+            tag: "WHAT WE DO",
+            title: "Digital solutions for real problems.",
+            p1: "Before writing a line of code, we understand the business. Every project begins with a strategic diagnosis that allows us to detect real optimization opportunities.",
+            p2: "From there we implement concrete solutions:",
+            bullets: [
+                "Intelligent automation of operational processes.",
+                "Chatbots and AI customer service systems.",
+                "CRM implementation and optimization.",
+                "Management and collection systems.",
+                "Custom software development and integration of existing tools."
+            ]
         },
         quienesSomos: {
             tag: "OUR ESSENCE",
@@ -135,13 +165,27 @@ export const dictionaries = {
         },
         cards: {
             tag: {
-                estudio: "Estudo",
-                puntoDeVista: "Ponto de vista"
+                estudio: "Notas",
+                puntoDeVista: "O que fazemos"
             },
             c1: "Reinvenção na era da IA generativa",
             c2: "Technology Vision 2025",
             c3: "Accenture Life Trends 2025",
-            c4: "IA para todos"
+            c4: "IA para todos",
+            viewWork: "Conheça nosso trabalho"
+        },
+        loQueHacemos: {
+            tag: "O QUE FAZEMOS",
+            title: "Soluções digitais para problemas reais.",
+            p1: "Antes de escrever uma linha de código, entendemos o negócio. Cada projeto começa com um diagnóstico estratégico que nos permite detectar oportunidades reais de otimização.",
+            p2: "A partir daí, implementamos soluções concretas:",
+            bullets: [
+                "Automação inteligente de processos operacionais.",
+                "Chatbots e sistemas de atendimento ao cliente com IA.",
+                "Implementação e otimização de CRM.",
+                "Sistemas de gestão e cobrança.",
+                "Desenvolvimento de software sob medida e integração de ferramentas existentes."
+            ]
         },
         quienesSomos: {
             tag: "NOSSA ESSÊNCIA",
