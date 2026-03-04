@@ -26,7 +26,7 @@ export default function Contacto() {
         setMessage({ type: "", text: "" });
 
         try {
-            const response = await fetch("http://localhost:5000/api/contacto", {
+            const response = await fetch("bootcamp.createch.com.ar/api/contacto", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

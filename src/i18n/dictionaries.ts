@@ -9,7 +9,17 @@ export const dictionaries = {
         hero: {
             juntos: "Juntos, ",
             nos: "nos",
-            paragraph: "La cadena de suministro que necesitamos, los efectos especiales que nos sorprenden, los estadios que llenamos, la comida que comemos, la ropa que nos ponemos, los coches que conducimos, las casas donde vivimos, las vacaciones que disfrutamos, los árboles que plantamos: juntos, podemos reinventar cualquier cosa.",
+            description: {
+                intro: "Juntos impulsamos tu crecimiento.",
+                painPoints: [
+                    "Ventas que se pierden por procesos manuales.",
+                    "Atención al cliente saturada.",
+                    "Cobranzas desordenadas.",
+                    "Gestión interna fragmentada."
+                ],
+                p1: "En Createch trabajamos donde realmente importa: en el corazón operativo de tu negocio. Analizamos, desarrollamos e implementamos soluciones tecnológicas que automatizan procesos, integran sistemas y aceleran resultados.",
+                p2: "Automatizamos tareas repetitivas, centralizamos información y transformamos la estructura interna de tu empresa en un sistema ágil, eficiente y listo para escalar."
+            },
             btn: "Descubrí lo qué hacemos",
             phrases: [
                 { prefix: "Createch impulsa tu ", word: "evolución" },
@@ -50,7 +60,17 @@ export const dictionaries = {
         hero: {
             juntos: "Together, ",
             nos: "we",
-            paragraph: "The supply chain we need, the special effects that amaze us, the stadiums we fill, the food we eat, the clothes we wear, the cars we drive, the houses we live in, the vacations we enjoy, the trees we plant: together, we can reinvent anything.",
+            description: {
+                intro: "Together we drive your growth.",
+                painPoints: [
+                    "Sales lost due to manual processes.",
+                    "Saturated customer service.",
+                    "Disorganized collections.",
+                    "Fragmented internal management."
+                ],
+                p1: "At Createch we work where it really matters: in the operational heart of your business. We analyze, develop, and implement technological solutions that automate processes, integrate systems, and accelerate results.",
+                p2: "We automate repetitive tasks, centralize information, and transform your company's internal structure into an agile, efficient system ready to scale."
+            },
             btn: "Discover what we do",
             phrases: [
                 { prefix: "Createch drives your ", word: "evolution" },
@@ -91,7 +111,17 @@ export const dictionaries = {
         hero: {
             juntos: "Juntos, ",
             nos: "nos",
-            paragraph: "A cadeia de abastecimento de que necessitamos, os efeitos especiais que nos surpreendem, os estádios que lotamos, a comida que comemos, a roupa que vestimos, os carros que conduzimos, as casas onde vivemos, as férias de que desfrutamos, as árvores que plantamos: juntos, podemos reinventar tudo.",
+            description: {
+                intro: "Juntos impulsionamos seu crescimento.",
+                painPoints: [
+                    "Vendas perdidas devido a processos manuais.",
+                    "Atendimento ao cliente saturado.",
+                    "Cobranças desorganizadas.",
+                    "Gestão interna fragmentada."
+                ],
+                p1: "Na Createch, trabalhamos onde realmente importa: no coração operacional do seu negócio. Analisamos, desenvolvemos e implementamos soluções tecnológicas que automatizam processos, integram sistemas e aceleram resultados.",
+                p2: "Automatizamos tarefas repetitivas, centralizamos informações e transformamos a estrutura interna da sua empresa em um sistema ágil, eficiente e pronto para escalar."
+            },
             btn: "Descubra o que fazemos",
             phrases: [
                 { prefix: "Createch impulsiona sua ", word: "evolução" },

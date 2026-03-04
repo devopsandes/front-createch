@@ -12,7 +12,7 @@ export function ParticlesBackground() {
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
 
-        // Set canvas to full window size
+
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -54,27 +54,27 @@ export function ParticlesBackground() {
             }
         }
 
-        // Create particles array, using a fixed number of static particles
+
         const particlesArray: Particle[] = [];
-        // Adjust number of particles back to a moderate-high density
+
         const numberOfParticles = Math.min(Math.floor(window.innerWidth / 3), 350);
 
         for (let i = 0; i < numberOfParticles; i++) {
             particlesArray.push(new Particle());
         }
 
-        // Draw particles once (static, no animation)
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < particlesArray.length; i++) {
             particlesArray[i].draw();
         }
 
-        // Redraw on resize to reposition them appropriately
+
         const handleResize = () => {
             resizeCanvas();
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // We recreate them so they spread across the new screen size properly
+
             particlesArray.length = 0;
             const newParticleCount = Math.min(Math.floor(window.innerWidth / 3), 350);
             for (let i = 0; i < newParticleCount; i++) {

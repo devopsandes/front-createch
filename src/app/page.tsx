@@ -27,12 +27,29 @@ export default function Home() {
           </div>
 
           {/* Right Text */}
-          <div className="flex flex-col space-y-8 lg:pl-16 relative">
+          <div className="flex flex-col space-y-4 lg:pl-16 relative">
             <div className="absolute left-0 lg:left-16 top-0 w-full lg:w-[calc(100%-4rem)] h-[3px] bg-gradient-to-r from-blue-600 to-red-600"></div>
-            <p className="text-gray-300 text-[1.05rem] leading-relaxed pt-8 font-serif sm:font-sans">
-              {t.hero.paragraph}
-            </p>
-            <div className="pt-4">
+
+            <div className="pt-6 text-gray-300 flex flex-col gap-3 font-sans">
+              <p className="text-[1.05rem] font-bold text-white mb-1">
+                {t.hero.description.intro}
+              </p>
+
+              <ul className="list-disc list-inside text-[0.95rem] text-gray-400 space-y-1 ml-1 marker:text-blue-500">
+                {t.hero.description.painPoints.map((point: string, idx: number) => (
+                  <li key={idx} className="leading-snug">{point}</li>
+                ))}
+              </ul>
+
+              <p className="text-[0.95rem] leading-relaxed mt-2 text-gray-300">
+                {t.hero.description.p1}
+              </p>
+              <p className="text-[0.95rem] leading-relaxed text-gray-400">
+                {t.hero.description.p2}
+              </p>
+            </div>
+
+            <div className="pt-2">
               <Link href="/lo-que-hacemos" className="flex items-center w-max text-[13px] font-bold uppercase tracking-wide hover:opacity-80 transition-opacity">
                 <span className="mr-4">{t.hero.btn}</span>
                 <span className="bg-gradient-to-br from-blue-600 to-red-600 w-8 h-8 flex items-center justify-center">
