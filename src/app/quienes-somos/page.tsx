@@ -41,13 +41,7 @@ export default function QuienesSomos() {
                                 {t.quienesSomos.title}
                             </h1>
                             <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light mb-4">
-                                {t.quienesSomos.p1}
-                            </p>
-                            <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light mb-4">
-                                {t.quienesSomos.p2}
-                            </p>
-                            <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light">
-                                {t.quienesSomos.p3}
+                                {t.quienesSomos.description}
                             </p>
                         </div>
                     </div>
