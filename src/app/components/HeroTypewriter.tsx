@@ -57,7 +57,7 @@ export function HeroTypewriter() {
         <span className="block mt-2 flex flex-wrap items-center gap-x-2 gap-y-2 lg:gap-x-3">
             <span>{typedPrefix}</span>
             <span className="inline-flex items-center">
-                <span className="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent pb-2 lg:pb-3">
+                <span className="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent pb-0 lg:pb-3">
                     {typedWord}
                 </span>
                 <span className="w-[3px] md:w-[4px] h-[3rem] md:h-[4rem] lg:h-[5.5rem] bg-gradient-to-b from-blue-600 to-red-600 ml-1 md:ml-2 animate-[pulse_1s_ease-in-out_infinite]" />

@@ -24,7 +24,14 @@ nextjs-portal {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 /* Allow selection only inside inputs and textareas */
@@ -124,4 +131,17 @@ textarea {
 
 .animate-slow-pulse {
   animation: slowPulse 5s infinite;
+}
+
+/* Custom scrollbar utility to hide scrollbars */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
 }
