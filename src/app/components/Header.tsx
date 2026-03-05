@@ -10,26 +10,30 @@ import { useLanguage } from "../../i18n/LanguageContext";
 // Flag Components (Original Colors)
 const FlagES = () => (
     <svg viewBox="0 0 64 42" className="w-6 h-4 shadow-sm border border-white/10 rounded-[1px]">
-        <rect width="64" height="42" fill="#AA151B" />
-        <rect width="64" height="21" y="10.5" fill="#F1BF00" />
+        <rect width="64" height="42" fill="#75AADB" />
+        <rect width="64" height="14" y="14" fill="#FFFFFF" />
+        <circle cx="32" cy="21" r="4" fill="#F6B40E" />
     </svg>
 );
 
 const FlagEN = () => (
     <svg viewBox="0 0 64 42" className="w-6 h-4 shadow-sm border border-white/10 rounded-[1px]">
-        <rect width="64" height="42" fill="#012169" />
-        <path d="M0 0l64 42M64 0L0 42" stroke="#FFF" strokeWidth="6" />
-        <path d="M0 0l64 42M64 0L0 42" stroke="#C8102E" strokeWidth="4" />
-        <path d="M32 0v42M0 21h64" stroke="#FFF" strokeWidth="10" />
-        <path d="M32 0v42M0 21h64" stroke="#C8102E" strokeWidth="6" />
+        <rect width="64" height="42" fill="#B22234" />
+        <path d="M0 3.23h64M0 9.69h64M0 16.15h64M0 22.61h64M0 29.07h64M0 35.53h64" stroke="#FFF" strokeWidth="3.23" />
+        <rect width="25.6" height="22.6" fill="#3C3B6E" />
+        <circle cx="4" cy="4" r="1" fill="#FFF" />
+        <circle cx="12" cy="4" r="1" fill="#FFF" />
+        <circle cx="20" cy="4" r="1" fill="#FFF" />
+        <circle cx="8" cy="8" r="1" fill="#FFF" />
+        <circle cx="16" cy="8" r="1" fill="#FFF" />
     </svg>
 );
 
 const FlagPT = () => (
     <svg viewBox="0 0 64 42" className="w-6 h-4 shadow-sm border border-white/10 rounded-[1px]">
-        <rect width="25.6" height="42" fill="#006600" />
-        <rect width="38.4" height="42" x="25.6" fill="#FF0000" />
-        <circle cx="25.6" cy="21" r="7" fill="#FFFF00" stroke="#000" strokeWidth="0.5" />
+        <rect width="64" height="42" fill="#009739" />
+        <path d="M32 4l24 17-24 17-24-17z" fill="#FEDD00" />
+        <circle cx="32" cy="21" r="8" fill="#012169" />
     </svg>
 );
 
@@ -94,14 +98,14 @@ export function Header() {
                         <button
                             onClick={() => setLanguage("en")}
                             className={`p-1 rounded-full transition-all ${language === 'en' ? 'bg-white/20 scale-110' : 'opacity-40 hover:opacity-100'}`}
-                            title="English (EN)"
+                            title="USA (EN)"
                         >
                             <FlagEN />
                         </button>
                         <button
                             onClick={() => setLanguage("pt")}
                             className={`p-1 rounded-full transition-all ${language === 'pt' ? 'bg-white/20 scale-110' : 'opacity-40 hover:opacity-100'}`}
-                            title="Português (PT)"
+                            title="Brasil (PT)"
                         >
                             <FlagPT />
                         </button>
@@ -114,7 +118,7 @@ export function Header() {
                             className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors pb-1 text-sm font-medium"
                         >
                             <Globe className="w-5 h-5" />
-                            {language === 'es' ? "Argentina" : language === 'en' ? "English" : "Português"}
+                            {language === 'es' ? "Argentina" : language === 'en' ? "USA" : "Brasil"}
                         </button>
 
                         {isLangOpen && (
@@ -129,13 +133,13 @@ export function Header() {
                                     onClick={() => { setLanguage("en"); setIsLangOpen(false); }}
                                     className="text-left px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
-                                    English
+                                    USA
                                 </button>
                                 <button
                                     onClick={() => { setLanguage("pt"); setIsLangOpen(false); }}
                                     className="text-left px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
-                                    Português
+                                    Brasil
                                 </button>
                             </div>
                         )}
