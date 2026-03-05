@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Globe, Menu, X } from "lucide-react";
+import { Globe } from "lucide-react";
 import { TypewriterLogo } from "./TypewriterLogo";
 import { useLanguage } from "../../i18n/LanguageContext";
 
@@ -40,13 +40,7 @@ const FlagPT = () => (
 export function Header() {
     const pathname = usePathname();
     const [isLangOpen, setIsLangOpen] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { language, setLanguage, t } = useLanguage();
-
-    // Close menu when route changes
-    useEffect(() => {
-        setIsMenuOpen(false);
-    }, [pathname]);
 
     const getLinkStyle = (path: string) => {
         const isActive = pathname === path;
@@ -79,9 +73,14 @@ export function Header() {
                     <Link href="/quienes-somos" className={getLinkStyle("/quienes-somos")}>
                         {t.nav.about}
                     </Link>
-                    <Link href="/nuestros-trabajos" className={getLinkStyle("/nuestros-trabajos")}>
+                    <a
+                        href="https://wa.me/5492616540953"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={getLinkStyle("/nuestros-trabajos")}
+                    >
                         {t.nav.ourWork}
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Right Section: Language & Mobile Menu Toggle */}
@@ -144,60 +143,38 @@ export function Header() {
                             </div>
                         )}
                     </div>
-
-                    {/* Mobile Menu Toggle - Keeping it for full overlay option */}
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="lg:hidden text-white p-2"
-                    >
-                        {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
                 </div>
 
-                {/* Mobile Menu Overlay */}
-                {isMenuOpen && (
-                    <div className="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center lg:hidden">
-                        <button
-                            onClick={() => setIsMenuOpen(false)}
-                            className="absolute top-8 right-8 text-white"
-                        >
-                            <X size={32} />
-                        </button>
-
-                        <div className="flex flex-col items-center gap-8 text-2xl font-bold">
-                            <Link href="/lo-que-hacemos" onClick={() => setIsMenuOpen(false)}>
-                                {t.nav.whatWeDo}
-                            </Link>
-                            <Link href="/contacto" onClick={() => setIsMenuOpen(false)}>
-                                {t.nav.contact}
-                            </Link>
-                            <Link href="/quienes-somos" onClick={() => setIsMenuOpen(false)}>
-                                {t.nav.about}
-                            </Link>
-                            <Link href="/nuestros-trabajos" onClick={() => setIsMenuOpen(false)}>
-                                {t.nav.ourWork}
-                            </Link>
-                        </div>
-                    </div>
-                )}
             </nav>
 
             {/* Mobile Sub-Navigation Rows (Always visible on mobile) */}
             <div className="lg:hidden flex overflow-x-auto hide-scrollbar px-4 pb-4 gap-6 bg-black border-b border-white/5 scroll-smooth">
                 {[
-                    { name: t.nav.whatWeDo, href: "/lo-que-hacemos" },
-                    { name: t.nav.contact, href: "/contacto" },
-                    { name: t.nav.about, href: "/quienes-somos" },
-                    { name: t.nav.ourWork, href: "/nuestros-trabajos" }
+                    { name: t.nav.whatWeDo, href: "/lo-que-hacemos", isExternal: false },
+                    { name: t.nav.contact, href: "/contacto", isExternal: false },
+                    { name: t.nav.about, href: "/quienes-somos", isExternal: false },
+                    { name: t.nav.ourWork, href: "https://wa.me/5492616540953", isExternal: true }
                 ].map((item) => (
-                    <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`text-[10px] font-bold uppercase tracking-[0.15em] whitespace-nowrap transition-colors ${pathname === item.href ? "text-blue-500" : "text-gray-400 hover:text-white"
-                            }`}
-                    >
-                        {item.name}
-                    </Link>
+                    item.isExternal ? (
+                        <a
+                            key={item.href}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-gray-400 hover:text-white transition-colors"
+                        >
+                            {item.name}
+                        </a>
+                    ) : (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            className={`text-[10px] font-bold uppercase tracking-[0.15em] whitespace-nowrap transition-colors ${pathname === item.href ? "text-blue-500" : "text-gray-400 hover:text-white"
+                                }`}
+                        >
+                            {item.name}
+                        </Link>
+                    )
                 ))}
             </div>
         </header>
