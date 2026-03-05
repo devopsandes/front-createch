@@ -4,7 +4,7 @@ export function WhatsAppButton() {
     return (
         <div className="fixed bottom-32 md:bottom-[30vh] right-6 lg:right-[calc(12.5%-(56px/2))] z-50">
             <Link
-                href="https://wa.me/"
+                href="https://wa.me/5492616540953"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-red-600 shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 relative"
