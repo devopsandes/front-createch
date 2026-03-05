@@ -55,12 +55,12 @@ export default function Contacto() {
     };
 
     return (
-        <div className="min-h-screen w-full bg-black text-white flex flex-col font-sans overflow-hidden">
+        <div className="h-screen w-full bg-black text-white flex flex-col font-sans overflow-hidden">
             <Header />
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex items-center justify-center px-6 lg:px-24 shrink relative z-10 py-12">
+            <main className="flex-1 flex items-center justify-center px-6 lg:px-24 shrink relative z-10 py-24 lg:py-12">
                 <div className="w-full max-w-2xl bg-gradient-to-br from-[#120718] to-black border border-white/10 p-8 md:p-12 rounded-sm shadow-2xl relative overflow-hidden group">
 
                     <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-600 to-red-600"></div>

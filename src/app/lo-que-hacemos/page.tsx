@@ -10,12 +10,12 @@ export default function LoQueHacemos() {
     const { t } = useLanguage();
 
     return (
-        <div className="w-full bg-black text-white flex flex-col font-sans min-h-screen flex-grow">
+        <div className="w-full bg-black text-white flex flex-col font-sans h-screen overflow-hidden">
             <Header />
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 shrink relative z-10 py-12 md:py-16 mt-16 md:mt-20">
+            <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 shrink relative z-10 py-24 md:py-16 lg:py-0">
                 <div className="w-full max-w-[1300px] mx-auto">
                     <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
                         {/* Text Content (Right) */}

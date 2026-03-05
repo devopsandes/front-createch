@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function WhatsAppButton() {
     return (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-32 md:bottom-[30vh] right-6 lg:right-[calc(12.5%-(56px/2))] z-50">
             <Link
                 href="https://wa.me/"
                 target="_blank"
@@ -10,8 +10,8 @@ export function WhatsAppButton() {
                 className="group flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-red-600 shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 relative"
                 aria-label="Contactar por WhatsApp"
             >
-                {/* Subtle outer pulse effect */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600 to-red-600 opacity-40 animate-ping" />
+                {/* Subtle outer pulse effect - Slower and with more delay */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600 to-red-600 opacity-40 animate-slow-pulse" />
 
                 {/* SVG Icon */}
                 <svg

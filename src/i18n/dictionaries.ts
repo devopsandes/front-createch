@@ -12,10 +12,10 @@ export const dictionaries = {
             description: {
                 intro: "Juntos impulsamos tu crecimiento.",
                 painPoints: [
-                    "Ventas que se pierden por procesos manuales.",
-                    "Atención al cliente saturada.",
-                    "Cobranzas desordenadas.",
-                    "Gestión interna fragmentada."
+                    "Más ventas gracias a procesos automatizados.",
+                    "Atención al cliente rápida y sin saturación.",
+                    "Cobranzas ordenadas y bajo control.",
+                    "Gestión interna conectada y eficiente."
                 ],
                 p1: "En Createch trabajamos donde realmente importa: en el corazón operativo de tu negocio. Analizamos, desarrollamos e implementamos soluciones tecnológicas que automatizan procesos, integran sistemas y aceleran resultados.",
                 p2: "Automatizamos tareas repetitivas, centralizamos información y transformamos la estructura interna de tu empresa en un sistema ágil, eficiente y listo para escalar."
@@ -34,11 +34,12 @@ export const dictionaries = {
         cards: {
             tag: {
                 estudio: "Notas",
-                puntoDeVista: "Lo que hacemos"
+                puntoDeVista: "Lo que hacemos",
+                contacto: "Contactanos"
             },
-            c1: "Reinvención en la era de la IA generativa",
-            c2: "Technology Vision 2025",
-            c3: "Accenture Life Trends 2025",
+            c1: "Primeros pasos para lograr una automatización con IA",
+            c2: "Ventajas de la automatización con IA",
+            c3: "Sacate todas tus dudas",
             c4: "IA para todos",
             viewWork: "Conoce nuestro trabajo"
         },
@@ -77,10 +78,10 @@ export const dictionaries = {
             description: {
                 intro: "Together we drive your growth.",
                 painPoints: [
-                    "Sales lost due to manual processes.",
-                    "Saturated customer service.",
-                    "Disorganized collections.",
-                    "Fragmented internal management."
+                    "More sales thanks to automated processes.",
+                    "Fast and unserrated customer service.",
+                    "Orderly and controlled collections.",
+                    "Connected and efficient internal management."
                 ],
                 p1: "At Createch we work where it really matters: in the operational heart of your business. We analyze, develop, and implement technological solutions that automate processes, integrate systems, and accelerate results.",
                 p2: "We automate repetitive tasks, centralize information, and transform your company's internal structure into an agile, efficient system ready to scale."
@@ -99,11 +100,12 @@ export const dictionaries = {
         cards: {
             tag: {
                 estudio: "Notes",
-                puntoDeVista: "What we do"
+                puntoDeVista: "What we do",
+                contacto: "Contact us"
             },
-            c1: "Reinvention in the era of generative AI",
-            c2: "Technology Vision 2025",
-            c3: "Accenture Life Trends 2025",
+            c1: "First steps to achieve AI automation",
+            c2: "Advantages of AI automation",
+            c3: "Clear all your doubts",
             c4: "AI for everyone",
             viewWork: "View our work"
         },
@@ -142,10 +144,10 @@ export const dictionaries = {
             description: {
                 intro: "Juntos impulsionamos seu crescimento.",
                 painPoints: [
-                    "Vendas perdidas devido a processos manuais.",
-                    "Atendimento ao cliente saturado.",
-                    "Cobranças desorganizadas.",
-                    "Gestão interna fragmentada."
+                    "Mais vendas graças a processos automatizados.",
+                    "Atendimento ao cliente rápido e sem saturação.",
+                    "Cobranças ordenadas e sob controle.",
+                    "Gestão interna conectada e eficiente."
                 ],
                 p1: "Na Createch, trabalhamos onde realmente importa: no coração operacional do seu negócio. Analisamos, desenvolvemos e implementamos soluções tecnológicas que automatizam processos, integram sistemas e aceleram resultados.",
                 p2: "Automatizamos tarefas repetitivas, centralizamos informações e transformamos a estrutura interna da sua empresa em um sistema ágil, eficiente e pronto para escalar."
@@ -164,11 +166,12 @@ export const dictionaries = {
         cards: {
             tag: {
                 estudio: "Notas",
-                puntoDeVista: "O que fazemos"
+                puntoDeVista: "O que fazemos",
+                contacto: "Contate-nos"
             },
-            c1: "Reinvenção na era da IA generativa",
-            c2: "Technology Vision 2025",
-            c3: "Accenture Life Trends 2025",
+            c1: "Primeiros passos para alcançar a automação com IA",
+            c2: "Vantagens da automação com IA",
+            c3: "Tire todas as suas dúvidas",
             c4: "IA para todos",
             viewWork: "Conheça nosso trabalho"
         },

@@ -22,23 +22,23 @@ export function HeroTypewriter() {
 
         const timeout = setTimeout(() => {
             if (!isDeleting) {
-                // Typing forward
+
                 if (text !== fullText) {
                     setText(fullText.slice(0, text.length + 1));
                 } else {
-                    // Reached the end of the full phrase
+
                     setIsPaused(true);
                     setTimeout(() => {
                         setIsPaused(false);
                         setIsDeleting(true);
-                    }, 3000); // 3 seconds pause to read the full phrase
+                    }, 3000);
                 }
             } else {
-                // Deleting backward
+
                 if (text !== "") {
                     setText(fullText.slice(0, text.length - 1));
                 } else {
-                    // Fully deleted
+
                     setIsDeleting(false);
                     setWordIndex((prev) => (prev + 1) % phrases.length);
                 }
@@ -48,7 +48,7 @@ export function HeroTypewriter() {
         return () => clearTimeout(timeout);
     }, [text, isDeleting, isPaused, wordIndex, fullText]);
 
-    // To maintain styling: the prefix is white, the last word is gradient
+
     const prefixLength = currentPhrase.prefix.length;
     const typedPrefix = text.slice(0, prefixLength);
     const typedWord = text.slice(prefixLength);
