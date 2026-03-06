@@ -39,14 +39,14 @@ const articleSlides: ArticleSlide[] = [
 
 export default function Reinvencion() {
     return (
-        <div className="min-h-screen w-full bg-black text-white flex flex-col font-sans overflow-hidden">
+        <div className="min-h-screen md:h-screen w-full bg-black text-white flex flex-col font-sans overflow-y-auto md:overflow-hidden scroll-smooth">
             <Header />
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 shrink relative z-10 py-12">
+            <main className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-24 shrink relative z-10 py-8 md:py-4 lg:py-0 mt-10 md:mt-0">
                 <article className="w-full max-w-4xl mx-auto flex flex-col items-center">
-                    <div className="w-full text-center mb-8 relative z-20">
+                    <div className="w-full text-center mb-4 md:mb-6 relative z-20">
                         <div className="text-sm font-bold tracking-[0.2em] text-gray-400 uppercase mb-4">Estudio</div>
                         <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white px-4">
                             Reinvención en la era de la IA generativa

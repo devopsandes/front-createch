@@ -7,7 +7,7 @@ export function Footer() {
     const { t } = useLanguage();
 
     return (
-        <footer className="w-full flex flex-col md:flex-row justify-between items-center px-6 lg:px-24 py-4 shrink-0 relative z-20">
+        <footer className="w-full flex flex-col md:flex-row justify-between items-center px-6 lg:px-24 py-2 shrink-0 relative z-20">
             {/* Definición del Gradiente para los íconos (Invisible) */}
             <svg width="0" height="0" className="absolute">
                 <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="0%">

@@ -10,17 +10,17 @@ export default function QuienesSomos() {
     const { t } = useLanguage();
 
     return (
-        <div className="w-full bg-black text-white flex flex-col font-sans h-screen overflow-hidden">
+        <div className="w-full bg-black text-white flex flex-col font-sans min-h-screen md:h-screen overflow-y-auto md:overflow-hidden scroll-smooth">
             <Header />
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 shrink relative z-10 py-24 md:py-16 lg:py-0">
+            <main className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-24 shrink relative z-10 py-16 md:py-8 lg:py-0 mt-20 md:mt-0">
                 <div className="w-full max-w-[1300px] mx-auto">
-                    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20">
 
                         {/* Image Content (Left) */}
-                        <div className="flex-1 w-full max-w-md mx-auto relative h-[350px] md:h-[450px]">
+                        <div className="flex-1 w-full max-w-md mx-auto relative h-[250px] md:h-[350px] lg:h-[450px]">
                             <div className="w-full h-full relative bg-white rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                                 <Image
                                     src="/image-robot.jpg"
