@@ -46,7 +46,7 @@ export function ParticlesBackground() {
                 // Brand colors: Blue: rgb(59, 130, 246) [brighter], Red: rgb(220, 38, 38)
                 const isBlue = Math.random() > 0.5;
                 this.color = isBlue ? "59, 130, 246" : "220, 38, 38";
-                this.speed = Math.random() * 5 + 3;
+                this.speed = Math.random() * 1.5 + 0.5;
             }
 
             update() {
