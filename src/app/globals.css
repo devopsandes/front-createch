@@ -141,6 +141,11 @@ textarea {
   animation: ripple 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+.footer-normal-short {
+  background: black !important;
+  padding: 4px 24px !important;
+}
+
 /* Custom scrollbar utility to hide scrollbars */
 .hide-scrollbar {
   -ms-overflow-style: none;
@@ -154,38 +159,161 @@ textarea {
   /* Chrome, Safari and Opera */
 }
 
-/* Height-based responsive adjustments for short screens (Notebooks/768p) */
-@media screen and (min-width: 768px) and (max-height: 850px) {
-  .short-h-reduce-font {
-    font-size: clamp(2rem, 5vh, 3rem) !important;
-    min-height: auto !important;
-    margin-bottom: 0.5rem !important;
-  }
-  
-  .short-h-reduce-spacing {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    gap: 0.25rem !important;
+/* Consolidated height-based responsive adjustments for short and ultra-short screens */
+@media screen and (min-width: 768px) {
+  /* Short screens (Standard Notebooks ~768p) */
+  @media (max-height: 850px) {
+    .short-h-reduce-font {
+      font-size: clamp(1.8rem, 4.5vh, 2.5rem) !important;
+      min-height: 0 !important;
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .short-h-reduce-spacing {
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+      gap: 0.5rem !important;
+    }
+
+    .short-h-reduce-main {
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+    }
+
+    .short-h-reduce-cards {
+      height: 13vh !important;
+      min-height: 100px !important;
+      padding: 1rem !important;
+    }
+
+    .short-h-reduce-carousel {
+      margin-bottom: 0.25rem !important;
+    }
+
+    header nav {
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+    }
   }
 
-  .short-h-reduce-main {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
+  /* Ultra-short screens (like 600px height) */
+  @media (max-height: 650px) {
+    .v-short-hide {
+      display: none !important;
+    }
 
-  .short-h-reduce-cards {
-    height: 14vh !important;
-    min-height: 110px !important;
-  }
+    .short-h-reduce-font {
+      font-size: clamp(1.2rem, 3.8vh, 2.2rem) !important;
+      margin-bottom: 0.25rem !important;
+      margin-top: 0px !important;
+      min-height: 0 !important;
+      line-height: 1.1 !important;
+    }
 
-  /* Reduce pain points carousel margin */
-  .short-h-reduce-carousel {
-    margin-bottom: 0.25rem !important;
-  }
+    .short-h-reduce-spacing {
+      padding-top: 0px !important;
+      gap: 0.25rem !important;
+    }
+    
+    .short-h-reduce-spacing p {
+      line-height: 1.2 !important;
+      font-size: 0.85rem !important;
+      margin-bottom: 0.15rem !important;
+    }
 
-  /* Reduce header padding for more space */
-  header nav {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    .short-h-reduce-cards {
+      height: 12vh !important;
+      min-height: 85px !important;
+      padding: 0.5rem 0.75rem !important;
+    }
+    
+    .short-h-reduce-cards h3 {
+      font-size: 0.7rem !important;
+      line-height: 1.1 !important;
+    }
+
+    .short-h-reduce-carousel {
+      margin-bottom: 0.25rem !important;
+    }
+
+    header nav a {
+       font-size: 0.75rem !important;
+    }
+
+    /* Footer reductions */
+    footer {
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+    }
+    
+    footer a {
+      padding: 0.15rem !important;
+    }
+    
+    footer svg:not(.absolute) {
+      width: 1.1rem !important;
+      height: 1.1rem !important;
+    }
+
+    footer div:last-child {
+      font-size: 9px !important;
+    }
+
+    /* WhatsApp Scale down */
+    .wa-button-short {
+      transform: scale(0.55) !important;
+      transform-origin: bottom right !important;
+    }
+
+    /* General layout compression for internal pages */
+    .short-h-page-pt {
+      padding-top: 1rem !important;
+    }
+
+    .short-h-page-main {
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+      justify-content: center !important;
+    }
+
+    .short-h-article-spacing {
+      margin-bottom: 0.5rem !important;
+    }
+
+    .short-h-title-size {
+      font-size: clamp(2rem, 5vh, 3.5rem) !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .short-h-text-size {
+      font-size: 0.9rem !important;
+      line-height: 1.4 !important;
+    }
+
+    .short-h-img-container {
+      height: 25vh !important;
+      max-height: 250px !important;
+    }
+
+    /* Carousel specific compression */
+    .short-h-carousel-min {
+      min-height: 0 !important;
+      height: auto !important;
+    }
+
+    .short-h-carousel-pt {
+      padding-top: 0.25rem !important;
+    }
+
+    .short-h-carousel-spacing {
+      padding-bottom: 0.5rem !important;
+      gap: 0.25rem !important;
+    }
+
+    .short-h-button-compact {
+      padding: 0.5rem 1.5rem !important;
+      font-size: 0.7rem !important;
+      margin-top: 0px !important;
+    }
   }
 }

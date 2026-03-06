@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Createch - Juntos impulsamos tu crecimiento",
-  description: "La cadena de suministro que necesitamos, los efectos especiales que nos sorprenden, juntos, podemos reinventar cualquier cosa.",
+  description: "Impulsa la resolución de gestión en tu empresa con automatizaciones inteligentes.",
   icons: {
     icon: "/icon.png",
   },

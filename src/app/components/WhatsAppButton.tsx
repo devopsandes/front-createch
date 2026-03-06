@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function WhatsAppButton() {
     return (
-        <div className="fixed bottom-36 md:bottom-[28vh] lg:bottom-[28vh] right-6 lg:right-[calc(12.5%-(56px/2))] z-50 [@media(min-width:768px)_and_(max-height:850px)]:bottom-[22vh]">
+        <div className="fixed bottom-36 md:bottom-[28vh] lg:bottom-[28vh] right-6 lg:right-[calc(12.5%-(56px/2))] z-50 [@media(min-width:768px)_and_(max-height:850px)]:bottom-[22vh] [@media(min-width:768px)_and_(max-height:650px)]:bottom-[195px] wa-button-short">
             <Link
                 href="https://wa.me/5492616540953"
                 target="_blank"

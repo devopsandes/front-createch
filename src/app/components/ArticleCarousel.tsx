@@ -42,16 +42,16 @@ export function ArticleCarousel({ slides, fullArticle }: ArticleCarouselProps) {
         <div className="relative w-full flex flex-col select-none group/carousel">
             {/* Carousel Container */}
             <div 
-                className="w-full min-h-[500px] md:min-h-[400px] relative overflow-hidden cursor-pointer"
+                className="w-full min-h-[500px] md:min-h-[400px] relative overflow-hidden cursor-pointer short-h-carousel-min"
                 onClick={nextSlide}
             >
                 {/* Decorative Gradient Line - Centered */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[3px] bg-gradient-to-r from-blue-600 to-red-600 z-20"></div>
 
                 {/* Static Arrow and Counter - Centered above/beside text */}
-                <div className="absolute top-12 left-1/2 -translate-x-1/2 ml-[220px] md:ml-[300px] lg:ml-[360px] hidden sm:flex flex-col items-center gap-1 shrink-0 group/arrow z-30">
+                <div className="absolute top-12 left-1/2 -translate-x-1/2 ml-[220px] md:ml-[300px] lg:ml-[360px] hidden sm:flex flex-col items-center gap-1 shrink-0 group/arrow z-30 [@media(max-height:650px)]:top-4">
                     <div className="relative">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 md:w-14 md:h-14 transition-transform duration-300">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 md:w-14 md:h-14 transition-transform duration-300 [@media(max-height:650px)]:w-10 [@media(max-height:650px)]:h-10">
                             <defs>
                                 <linearGradient id="movingArrowGradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
                                     <stop offset="0%" stopColor="#2563eb" />
@@ -83,19 +83,19 @@ export function ArticleCarousel({ slides, fullArticle }: ArticleCarouselProps) {
                     {slides.map((slide, idx) => (
                         <div
                             key={idx}
-                            className="w-full flex-shrink-0 text-center pt-12 flex flex-col items-center relative"
+                            className="w-full flex-shrink-0 text-center pt-12 flex flex-col items-center relative short-h-carousel-pt"
                         >
                             {slide.heading && (
-                                <div className="flex flex-col items-center gap-2 mb-6 group/title">
-                                    <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight max-w-2xl px-12">
+                                <div className="flex flex-col items-center gap-2 mb-6 group/title [@media(max-height:650px)]:mb-2">
+                                    <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight max-w-2xl px-12 short-h-text-size">
                                         <span className="opacity-90">{slide.heading}</span>
                                     </h2>
                                 </div>
                             )}
 
-                            <div className="space-y-6 max-w-2xl px-12 pb-12">
+                            <div className="space-y-6 max-w-2xl px-12 pb-12 short-h-carousel-spacing">
                                 {slide.content.map((paragraph, pIdx) => (
-                                    <p key={pIdx} className="text-gray-400 text-xl md:text-2xl leading-relaxed font-light opacity-90">
+                                    <p key={pIdx} className="text-gray-400 text-xl md:text-2xl leading-relaxed font-light opacity-90 short-h-text-size">
                                         {paragraph}
                                     </p>
                                 ))}
@@ -103,13 +103,13 @@ export function ArticleCarousel({ slides, fullArticle }: ArticleCarouselProps) {
 
                             {/* Ver más button in the last slide - only show on the specific slide */}
                             {idx === slides.length - 1 && (
-                                <div className={`mt-4 relative z-40 transition-all duration-700 delay-300 ${currentIndex === idx ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                                <div className={`mt-2 md:mt-4 relative z-40 transition-all duration-700 delay-300 ${currentIndex === idx ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'} [@media(max-height:650px)]:mt-0`}>
                                     <button 
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             setIsModalOpen(true);
                                         }}
-                                        className="px-8 py-3 bg-gradient-to-r from-blue-600 to-red-600 rounded-full text-white font-bold text-sm tracking-widest uppercase hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/20 active:scale-95"
+                                        className="px-8 py-3 bg-gradient-to-r from-blue-600 to-red-600 rounded-full text-white font-bold text-sm tracking-widest uppercase hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/20 active:scale-95 short-h-button-compact"
                                     >
                                         Ver más
                                     </button>

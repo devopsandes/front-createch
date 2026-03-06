@@ -54,13 +54,13 @@ export function HeroTypewriter() {
     const typedWord = text.slice(prefixLength);
 
     return (
-        <span className="block mt-2 flex flex-wrap items-center gap-x-2 gap-y-2 lg:gap-x-3">
+        <span className="block mt-0 md:mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 md:gap-y-2 lg:gap-x-3 short-h-reduce-spacing">
             <span>{typedPrefix}</span>
             <span className="inline-flex items-center">
                 <span className="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent pb-0 lg:pb-3">
                     {typedWord}
                 </span>
-                <span className="w-[3px] md:w-[4px] h-[2.2rem] md:h-[2.8rem] lg:h-[4.2rem] bg-gradient-to-b from-blue-600 to-red-600 ml-1 md:ml-2 animate-[pulse_1s_ease-in-out_infinite]" />
+                <span className="w-[2px] md:w-[4px] h-[1.2em] bg-gradient-to-b from-blue-600 to-red-600 ml-1 md:ml-2 animate-[pulse_1s_ease-in-out_infinite]" />
             </span>
         </span>
     );

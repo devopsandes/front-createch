@@ -66,23 +66,23 @@ export default function Contacto() {
                     {/* Top Accent Gradient Line */}
                     <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-blue-600 via-purple-500 to-red-600 shadow-[0_4px_20px_rgba(37,99,235,0.4)]"></div>
 
-                    <div className="text-center mb-10">
-                        <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase mb-4">
+                    <div className="text-center mb-6 [@media(max-height:650px)]:mb-2">
+                        <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase mb-2 [@media(max-height:650px)]:mb-0">
                             Hablemos
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-black tracking-tighter text-white leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-black tracking-tighter text-white leading-tight short-h-title-size">
                             Dejanos tu consulta
                         </h1>
-                        <p className="text-gray-400 mt-4 text-sm md:text-base font-light">
+                        <p className="text-gray-400 mt-2 text-sm md:text-base font-light [@media(max-height:650px)]:hidden">
                             Estamos listos para impulsar tu próximo gran paso.
                         </p>
                     </div>
 
                     <form className="w-full space-y-6" onSubmit={handleSubmit}>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 [@media(max-height:650px)]:gap-x-4 [@media(max-height:650px)]:gap-y-2">
                             {/* Nombre */}
-                            <div className="space-y-2 group/field">
-                                <label htmlFor="nombre" className="text-[11px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-blue-500 transition-colors flex items-center gap-2 ml-1">
+                            <div className="space-y-1 group/field">
+                                <label htmlFor="nombre" className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-blue-500 transition-colors flex items-center gap-2 ml-1">
                                     <User className="w-3 h-3" /> Nombre
                                 </label>
                                 <div className="relative">
@@ -92,15 +92,15 @@ export default function Contacto() {
                                         value={formData.nombre}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-sm"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-xs [@media(max-height:650px)]:py-2"
                                         placeholder="Tu nombre completo"
                                     />
                                 </div>
                             </div>
                             
                             {/* Celular */}
-                            <div className="space-y-2 group/field">
-                                <label htmlFor="celular" className="text-[11px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-red-500 transition-colors flex items-center gap-2 ml-1">
+                            <div className="space-y-1 group/field">
+                                <label htmlFor="celular" className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-red-500 transition-colors flex items-center gap-2 ml-1">
                                     <Phone className="w-3 h-3" /> Celular
                                 </label>
                                 <div className="relative">
@@ -110,43 +110,43 @@ export default function Contacto() {
                                         value={formData.celular}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-red-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-sm"
+                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-xs [@media(max-height:650px)]:py-2"
                                         placeholder="Tu número de contacto"
                                     />
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Email */}
-                        <div className="space-y-2 group/field">
-                            <label htmlFor="email" className="text-[11px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-blue-500 transition-colors flex items-center gap-2 ml-1">
-                                <Mail className="w-3 h-3" /> Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-sm"
-                                placeholder="tu@email.com"
-                            />
-                        </div>
+                            {/* Email - Full width in mobile, part of grid in desktop-short if we want, but better keep it consistent or move to grid */}
+                            <div className="space-y-1 group/field md:col-span-2">
+                                <label htmlFor="email" className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-blue-500 transition-colors flex items-center gap-2 ml-1">
+                                    <Mail className="w-3 h-3" /> Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-xs [@media(max-height:650px)]:py-2"
+                                    placeholder="tu@email.com"
+                                />
+                            </div>
 
-                        {/* Consulta */}
-                        <div className="space-y-2 group/field">
-                            <label htmlFor="consulta" className="text-[11px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-red-500 transition-colors flex items-center gap-2 ml-1">
-                                <MessageSquare className="w-3 h-3" /> Tu consulta
-                            </label>
-                            <textarea
-                                id="consulta"
-                                rows={4}
-                                value={formData.consulta}
-                                onChange={handleChange}
-                                required
-                                className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-red-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-sm resize-none"
-                                placeholder="¿En qué podemos ayudarte hoy?"
-                            ></textarea>
+                            {/* Consulta - Full width */}
+                            <div className="space-y-1 group/field md:col-span-2">
+                                <label htmlFor="consulta" className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-focus-within/field:text-red-500 transition-colors flex items-center gap-2 ml-1">
+                                    <MessageSquare className="w-3 h-3" /> Tu consulta
+                                </label>
+                                <textarea
+                                    id="consulta"
+                                    rows={2}
+                                    value={formData.consulta}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-red-500/50 focus:bg-white/10 transition-all duration-300 placeholder:text-gray-600 text-xs resize-none [@media(max-height:650px)]:py-2 [@media(max-height:650px)]:rows-1"
+                                    placeholder="¿En qué podemos ayudarte hoy?"
+                                ></textarea>
+                            </div>
                         </div>
 
                         {/* Status Messages */}
@@ -163,13 +163,13 @@ export default function Contacto() {
                         )}
 
                         {/* Submit Button */}
-                        <div className="pt-4">
+                        <div className="pt-1 [@media(max-height:650px)]:pt-0">
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
                                 className={`w-full group/btn md:w-auto relative px-10 py-4 font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 ${
                                     isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02] active:scale-95'
-                                }`}
+                                } [@media(max-height:650px)]:px-6 [@media(max-height:650px)]:py-2`}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-red-600 to-blue-600 bg-[length:200%_100%] animate-gradient-fast rounded-full"></div>
                                 <div className="absolute inset-[2px] bg-black rounded-full group-hover/btn:opacity-0 transition-opacity duration-500"></div>
