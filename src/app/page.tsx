@@ -7,7 +7,6 @@ import { HeroTypewriter } from "./components/HeroTypewriter";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { PainPointsCarousel } from "./components/PainPointsCarousel";
-import { WhatsAppButton } from "./components/WhatsAppButton";
 import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Home() {
@@ -102,7 +101,7 @@ export default function Home() {
       <div className="shrink-0 md:mt-0 [@media(min-width:768px)_and_(max-height:650px)]:footer-normal-short">
         <Footer />
       </div>
-      <WhatsAppButton />
+      
     </div>
   );
 }
