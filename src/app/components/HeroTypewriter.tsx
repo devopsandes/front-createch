@@ -54,7 +54,7 @@ export function HeroTypewriter() {
     const typedWord = text.slice(prefixLength);
 
     return (
-        <span className="block mt-0 md:mt-2 flex flex-nowrap items-center gap-x-1 md:gap-x-2 gap-y-0 lg:gap-x-3 short-h-reduce-spacing whitespace-nowrap">
+        <span className="block mt-0 md:mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 md:gap-y-2 lg:gap-x-3 short-h-reduce-spacing">
             <span>{typedPrefix}</span>
             <span className="inline-flex items-center">
                 <span className="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent pb-0 lg:pb-3">

@@ -24,7 +24,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-2 md:gap-8 lg:gap-16 items-center w-full max-w-[1400px] mx-auto">
           {/* Left Hero Text */}
           <div className="flex flex-col justify-center text-left">
-            <h1 className="text-lg sm:text-xl md:text-3xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] md:leading-[1.1] lg:leading-[1.05] tracking-tight text-white mt-12 md:mt-0 mb-1 md:mb-4 lg:mb-8 short-h-reduce-font">
+            <h1 className="text-[1.65rem] xs:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] md:leading-[1.1] lg:leading-[1.05] tracking-tight text-white mt-12 md:mt-0 mb-1 md:mb-4 lg:mb-8 short-h-reduce-font">
               <HeroTypewriter />
             </h1>
           </div>
