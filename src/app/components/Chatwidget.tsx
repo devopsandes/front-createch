@@ -200,9 +200,9 @@ export default function ChatWidget() {
         }
         @media (max-width: 480px) {
           .main-container {
-            width: calc(100% - 40px);
-            height: 50vh;
-            bottom: 280px;
+            width: calc(100% - 60px); /* Slightly more padding */
+            height: 38vh; /* Reduced from 50vh (~25% reduction) */
+            bottom: 240px;
             right: 20px;
           }
         }
@@ -293,8 +293,10 @@ export default function ChatWidget() {
           }
           @media (max-width: 480px) {
              .chat-trigger-button {
-              bottom: 190px !important;
+              bottom: 160px !important;
               right: 20px !important;
+              width: 65px !important;  /* Further reduction */
+              height: 65px !important;
             }
           }
         `}</style>

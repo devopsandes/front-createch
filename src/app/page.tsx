@@ -24,7 +24,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-2 md:gap-8 lg:gap-16 items-center w-full max-w-[1400px] mx-auto">
           {/* Left Hero Text */}
           <div className="flex flex-col justify-center text-left">
-            <h1 className="text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] md:leading-[1.1] lg:leading-[1.05] tracking-tight text-white mt-12 md:mt-0 mb-1 md:mb-4 lg:mb-8 short-h-reduce-font">
+            <h1 className="text-lg sm:text-xl md:text-3xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] md:leading-[1.1] lg:leading-[1.05] tracking-tight text-white mt-12 md:mt-0 mb-1 md:mb-4 lg:mb-8 short-h-reduce-font">
               <HeroTypewriter />
             </h1>
           </div>
@@ -66,6 +66,16 @@ export default function Home() {
 
       {/* Bottom Cards Area */}
       <div className="flex overflow-x-auto md:grid md:grid-cols-4 gap-4 px-6 md:px-12 mt-4 md:mt-auto py-2 md:py-2 relative z-20 hide-scrollbar shrink-0 short-h-mt-auto">
+        {/* Mobile Swipe Indicator Overlay */}
+        <div className="lg:hidden absolute right-12 top-1/2 -translate-y-1/2 z-30 animate-[pulse-swipe_2s_infinite] opacity-80 pointer-events-none">
+            <div className="flex flex-col items-center gap-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]">
+                    <path d="M18 8L22 12L18 16" />
+                    <path d="M2 12H22" />
+                </svg>
+                <span className="text-[9px] font-black uppercase tracking-widest text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.5)]">Slide</span>
+            </div>
+        </div>
         {/* Card 1 (Red) */}
         <Link href="/primerospasos" className="bg-gradient-to-br from-[#380e0e] to-black text-white p-4 md:p-6 flex flex-col justify-between group cursor-pointer border-t-[3px] border-transparent hover:border-red-600 transition-all relative overflow-hidden h-[18vh] min-h-[140px] rounded-sm block min-w-[80%] sm:min-w-[45%] md:min-w-0 short-h-reduce-cards shrink-0">
           <div className="text-[10px] font-bold tracking-[0.2em] text-gray-300 uppercase shrink-0">{t.cards.tag.estudio}</div>
@@ -101,7 +111,12 @@ export default function Home() {
       <div className="shrink-0 md:mt-0 [@media(min-width:768px)_and_(max-height:650px)]:footer-normal-short">
         <Footer />
       </div>
-      
+      <style jsx global>{`
+        @keyframes pulse-swipe {
+            0%, 100% { opacity: 0.3; transform: translate(0, -50%); }
+            50% { opacity: 0.8; transform: translate(8px, -50%); }
+        }
+      `}</style>
     </div>
   );
 }

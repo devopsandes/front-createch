@@ -56,14 +56,14 @@ export function Header() {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-black w-full flex flex-col">
-            <nav className="flex items-center justify-between px-4 py-2 lg:px-12 lg:py-4 shrink-0 relative z-20 bg-black">
+        <header className="sticky top-0 z-50 w-full flex flex-col backdrop-blur-md bg-black/80 border-b border-white/5">
+            <nav className="flex items-center justify-between px-4 py-3 lg:px-12 lg:py-5 shrink-0 relative z-20">
                 <Link href="/" className="flex-shrink-0 flex items-center">
                     <TypewriterLogo isActive={true} />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 justify-center items-center gap-10 w-max">
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 justify-center items-center gap-12 w-max">
                     <Link href="/lo-que-hacemos" className={getLinkStyle("/lo-que-hacemos")}>
                         {t.nav.whatWeDo}
                     </Link>
@@ -84,26 +84,26 @@ export function Header() {
                 </div>
 
                 {/* Right Section: Language & Mobile Menu Toggle */}
-                <div className="flex-shrink-0 flex items-center gap-4 lg:gap-6 relative">
+                <div className="flex-shrink-0 flex items-center gap-4 lg:gap-8 relative">
                     {/* Language Switcher - Monochrome Flags (Mobile/Tablet Only) */}
-                    <div className="flex lg:hidden items-center gap-3 bg-white/5 p-1 rounded-full border border-white/10">
+                    <div className="flex lg:hidden items-center gap-2 bg-white/5 p-1 rounded-full border border-white/10 backdrop-blur-sm">
                         <button
                             onClick={() => setLanguage("es")}
-                            className={`p-1 rounded-full transition-all ${language === 'es' ? 'bg-white/20 scale-110' : 'opacity-40 hover:opacity-100'}`}
+                            className={`p-1.5 rounded-full transition-all ${language === 'es' ? 'bg-white/20 scale-110 shadow-lg shadow-white/5' : 'opacity-40 hover:opacity-100'}`}
                             title="Argentina (ES)"
                         >
                             <FlagES />
                         </button>
                         <button
                             onClick={() => setLanguage("en")}
-                            className={`p-1 rounded-full transition-all ${language === 'en' ? 'bg-white/20 scale-110' : 'opacity-40 hover:opacity-100'}`}
+                            className={`p-1.5 rounded-full transition-all ${language === 'en' ? 'bg-white/20 scale-110 shadow-lg shadow-white/5' : 'opacity-40 hover:opacity-100'}`}
                             title="USA (EN)"
                         >
                             <FlagEN />
                         </button>
                         <button
                             onClick={() => setLanguage("pt")}
-                            className={`p-1 rounded-full transition-all ${language === 'pt' ? 'bg-white/20 scale-110' : 'opacity-40 hover:opacity-100'}`}
+                            className={`p-1.5 rounded-full transition-all ${language === 'pt' ? 'bg-white/20 scale-110 shadow-lg shadow-white/5' : 'opacity-40 hover:opacity-100'}`}
                             title="Brasil (PT)"
                         >
                             <FlagPT />
@@ -114,29 +114,29 @@ export function Header() {
                     <div className="hidden lg:flex items-center gap-4 relative">
                         <button
                             onClick={() => setIsLangOpen(!isLangOpen)}
-                            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors pb-1 text-sm font-medium"
+                            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors pb-1 text-base font-medium"
                         >
                             <Globe className="w-5 h-5" />
                             {language === 'es' ? "Argentina" : language === 'en' ? "USA" : "Brasil"}
                         </button>
 
                         {isLangOpen && (
-                            <div className="absolute top-full right-0 mt-2 py-2 w-32 bg-[#0e1c38] border border-blue-900/50 rounded-sm shadow-xl flex flex-col z-50">
+                            <div className="absolute top-full right-0 mt-2 py-2 w-32 bg-[#0e1c38]/95 backdrop-blur-xl border border-blue-500/30 rounded-lg shadow-2xl flex flex-col z-50">
                                 <button
                                     onClick={() => { setLanguage("es"); setIsLangOpen(false); }}
-                                    className="text-left px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                                    className="text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
                                     Argentina
                                 </button>
                                 <button
                                     onClick={() => { setLanguage("en"); setIsLangOpen(false); }}
-                                    className="text-left px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                                    className="text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
                                     USA
                                 </button>
                                 <button
                                     onClick={() => { setLanguage("pt"); setIsLangOpen(false); }}
-                                    className="text-left px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                                    className="text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
                                     Brasil
                                 </button>
@@ -148,7 +148,14 @@ export function Header() {
             </nav>
 
             {/* Mobile Sub-Navigation Rows (Always visible on mobile) */}
-            <div className="lg:hidden flex overflow-x-auto hide-scrollbar px-4 pb-4 gap-6 bg-black border-b border-white/5 scroll-smooth">
+            <div className="lg:hidden relative">
+                <div 
+                    className="flex overflow-x-auto hide-scrollbar px-6 pb-5 gap-8 scroll-smooth"
+                    style={{ 
+                        maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+                    }}
+                >
                 {[
                     { name: t.nav.whatWeDo, href: "/lo-que-hacemos", isExternal: false },
                     { name: t.nav.contact, href: "/contacto", isExternal: false },
@@ -161,7 +168,7 @@ export function Header() {
                             href={item.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[10px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-gray-400 hover:text-white transition-colors"
+                            className="text-[11px] font-bold uppercase tracking-[0.2em] whitespace-nowrap text-gray-400 hover:text-white transition-all hover:scale-105 active:scale-95"
                         >
                             {item.name}
                         </a>
@@ -169,13 +176,34 @@ export function Header() {
                         <Link
                             key={item.href}
                             href={item.href}
-                            className={`text-[10px] font-bold uppercase tracking-[0.15em] whitespace-nowrap transition-colors ${pathname === item.href ? "text-blue-500" : "text-gray-400 hover:text-white"
+                            className={`text-[11px] font-bold uppercase tracking-[0.2em] whitespace-nowrap transition-all hover:scale-105 active:scale-95 ${pathname === item.href 
+                                ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-400 border-b border-red-500/50" 
+                                : "text-gray-400 hover:text-white"
                                 }`}
                         >
                             {item.name}
                         </Link>
                     )
                 ))}
+                </div>
+                
+                {/* Swipe Indicator - Simplified & More Subtle */}
+                <div className="absolute right-3 bottom-5 animate-pulse-horizontal pointer-events-none opacity-50 flex flex-col items-center gap-0.5">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    <span className="text-[7px] font-bold uppercase tracking-[0.1em] text-white/70">Slide</span>
+                </div>
+
+                <style jsx>{`
+                    @keyframes pulse-horizontal {
+                        0%, 100% { transform: translateX(0); opacity: 0.2; }
+                        50% { transform: translateX(4px); opacity: 0.6; }
+                    }
+                    .animate-pulse-horizontal {
+                        animation: pulse-horizontal 2s ease-in-out infinite;
+                    }
+                `}</style>
             </div>
         </header>
     );

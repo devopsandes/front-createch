@@ -41,8 +41,8 @@ export default function LoQueHacemos() {
                             </ul>
                         </div>
 
-                        {/* Image Content (Left) */}
-                        <div className="flex-1 w-full max-w-sm mx-auto relative h-[180px] md:h-[350px] lg:h-[450px] short-h-img-container">
+                        {/* Image Content (Left) - Hidden on Mobile */}
+                        <div className="hidden md:block flex-1 w-full max-w-sm mx-auto relative h-[180px] md:h-[350px] lg:h-[450px] short-h-img-container">
                             <div className="w-full h-full relative bg-white rounded-2xl overflow-hidden border-2 border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.1)] flex items-center justify-center p-4">
                                 <Image
                                     src="/image-robot.jpg"
