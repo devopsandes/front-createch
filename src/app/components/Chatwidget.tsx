@@ -192,7 +192,7 @@ export default function ChatWidget() {
         }
         @media (min-width: 1024px) {
           .main-container {
-            bottom: 110px;
+            bottom: 340px;
             right: 40px;
             width: 380px;
             height: 520px;
@@ -298,7 +298,7 @@ export default function ChatWidget() {
         <style>{`
           @media (min-width: 1024px) {
             .chat-trigger-button {
-              bottom: 20px !important;
+              bottom: 250px !important;
               right: 40px !important;
             }
           }
