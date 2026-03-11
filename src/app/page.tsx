@@ -20,11 +20,11 @@ export default function Home() {
       {/* Main Content Area */}
       {/* Main Content Area */}
       {/* Main Content Area */}
-      <main className="px-6 md:px-12 lg:px-24 relative z-20 md:py-1 lg:py-2 short-h-reduce-main">
+      <main className="px-6 md:px-12 lg:px-24 relative z-20 md:py-1 lg:py-2 md:flex-1 flex flex-col justify-start md:justify-center short-h-reduce-main">
         <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-2 md:gap-8 lg:gap-16 items-center w-full max-w-[1400px] mx-auto">
           {/* Left Hero Text */}
           <div className="flex flex-col justify-center text-left">
-            <h1 className="text-[1.65rem] xs:text-3xl md:text-4xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] md:leading-[1.1] lg:leading-[1.05] tracking-tight text-white mt-12 md:mt-0 mb-1 md:mb-4 lg:mb-8 short-h-reduce-font">
+            <h1 className="text-[1.4rem] xxs:text-[1.6rem] xs:text-2xl md:text-4xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.2] md:leading-[1.1] lg:leading-[1.05] tracking-tight text-white mt-2 md:mt-0 mb-1 md:mb-4 lg:mb-8 short-h-reduce-font">
               <HeroTypewriter />
             </h1>
           </div>
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex flex-col md:pl-6 lg:pl-10 relative w-full short-h-reduce-spacing">
             <div className="absolute left-0 md:left-6 lg:left-10 top-0 w-[60%] lg:w-[75%] h-[2px] md:h-[3px] bg-gradient-to-r from-blue-600 to-red-600"></div>
 
-            <div className="pt-2 md:pt-4 text-gray-300 flex flex-col gap-1 md:gap-4 font-sans w-full">
+            <div className="pt-4 md:pt-4 text-gray-300 flex flex-col gap-4 md:gap-4 font-sans w-full">
               <p className="text-base md:text-xl lg:text-2xl font-bold text-white tracking-wide leading-snug">
                 {t.hero.description.intro}
               </p>
@@ -42,11 +42,11 @@ export default function Home() {
                 <PainPointsCarousel key={t.hero.description.intro} points={t.hero.description.painPoints} />
               </div>
 
-              <div className="flex flex-col space-y-1 md:space-y-4">
-                <p className="text-sm md:text-[0.95rem] lg:text-[1.05rem] leading-relaxed text-gray-300">
+              <div className="flex flex-col space-y-6 md:space-y-4">
+                <p className="text-base md:text-[0.95rem] lg:text-[1.05rem] leading-relaxed text-gray-300">
                   {t.hero.description.p1}
                 </p>
-                <p className="text-sm md:text-[0.95rem] lg:text-[1.05rem] leading-relaxed text-gray-400 v-short-hide">
+                <p className="text-base md:text-[0.95rem] lg:text-[1.05rem] leading-relaxed text-gray-400 v-short-hide">
                   {t.hero.description.p2}
                 </p>
               </div>
@@ -65,16 +65,16 @@ export default function Home() {
       </main>
 
       {/* Bottom Cards Area */}
-      <div className="flex overflow-x-auto md:grid md:grid-cols-4 gap-4 px-6 md:px-12 mt-4 md:mt-auto py-2 md:py-2 relative z-20 hide-scrollbar shrink-0 short-h-mt-auto">
+      <div className="flex overflow-x-auto md:grid md:grid-cols-4 gap-4 px-6 md:px-12 mt-0 mb-8 md:mb-0 md:mt-auto py-2 md:py-2 relative z-20 hide-scrollbar shrink-0 short-h-mt-auto md:pb-0">
         {/* Mobile Swipe Indicator Overlay */}
         <div className="lg:hidden absolute right-12 top-1/2 -translate-y-1/2 z-30 animate-[pulse-swipe_2s_infinite] opacity-80 pointer-events-none">
-            <div className="flex flex-col items-center gap-1">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]">
-                    <path d="M18 8L22 12L18 16" />
-                    <path d="M2 12H22" />
-                </svg>
-                <span className="text-[9px] font-black uppercase tracking-widest text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.5)]">Slide</span>
-            </div>
+          <div className="flex flex-col items-center gap-1">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]">
+              <path d="M18 8L22 12L18 16" />
+              <path d="M2 12H22" />
+            </svg>
+            <span className="text-[9px] font-black uppercase tracking-widest text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.5)]">Slide</span>
+          </div>
         </div>
         {/* Card 1 (Red) */}
         <Link href="/primerospasos" className="bg-gradient-to-br from-[#380e0e] to-black text-white p-4 md:p-6 flex flex-col justify-between group cursor-pointer border-t-[3px] border-transparent hover:border-red-600 transition-all relative overflow-hidden h-[18vh] min-h-[140px] rounded-sm block min-w-[80%] sm:min-w-[45%] md:min-w-0 short-h-reduce-cards shrink-0">

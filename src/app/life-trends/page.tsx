@@ -10,7 +10,7 @@ export default function LifeTrends() {
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col justify-center px-6 lg:px-24 shrink relative z-10 py-16 md:py-24">
+            <main className="flex-1 flex flex-col justify-start md:justify-center px-6 lg:px-24 shrink relative z-10 py-0 md:py-24 mt-4 md:mt-0">
                 <div className="w-full max-w-6xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
                         {/* Text Content (Left) */}
@@ -27,7 +27,7 @@ export default function LifeTrends() {
 
                         {/* Image Content (Right) */}
                         <div className="flex-1 w-full max-w-md mx-auto relative h-[350px] md:h-[450px]">
-                            <div className="w-full h-full relative bg-white rounded-2xl overflow-hidden border-2 border-white/20 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                            <div className="w-full h-full relative overflow-hidden flex items-center justify-center">
                                 <Image
                                     src="/image-robot.jpg"
                                     alt="Ilustración IA"

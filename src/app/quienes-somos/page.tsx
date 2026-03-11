@@ -15,7 +15,7 @@ export default function QuienesSomos() {
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-24 shrink relative z-10 py-16 md:py-8 lg:py-0 mt-20 md:mt-0 short-h-page-main">
+            <main className="flex-1 flex flex-col justify-start md:justify-center px-6 md:px-12 lg:px-24 shrink relative z-10 py-0 md:py-8 lg:py-0 mt-6 md:mt-0 short-h-page-main">
                 <div className="w-full max-w-[1300px] mx-auto">
                     <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20">
 

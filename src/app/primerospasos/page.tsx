@@ -40,7 +40,7 @@ export default function PrimerosPasos() {
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col pt-24 md:pt-32 lg:pt-40 px-6 md:px-12 lg:px-24 shrink relative z-10 pb-4 mt-4 md:mt-0 short-h-page-pt short-h-page-main">
+            <main className="flex-1 flex flex-col pt-6 md:pt-32 lg:pt-40 px-6 md:px-12 lg:px-24 shrink relative z-10 pb-4 mt-4 md:mt-0 short-h-page-pt short-h-page-main">
                 <article className="w-full flex flex-col items-center">
                     <div className="w-full text-center mb-4 md:mb-12 relative z-20 short-h-article-spacing">
                         <div className="text-sm font-bold tracking-[0.2em] text-gray-400 uppercase mb-2 [@media(max-height:650px)]:mb-1">Nota</div>

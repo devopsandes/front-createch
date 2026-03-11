@@ -60,7 +60,7 @@ export default function Contacto() {
             <ParticlesBackground />
 
             {/* Main Content Area */}
-            <main className="flex-1 flex items-center justify-center px-6 md:px-12 lg:px-24 shrink relative z-10 py-16 md:py-6 lg:py-0 mt-20 md:mt-0">
+            <main className="flex-1 flex flex-col justify-start md:items-center md:justify-center px-6 md:px-12 lg:px-24 shrink relative z-10 py-2 md:py-6 lg:py-0 mt-4 md:mt-0">
                 <div className="w-full max-w-2xl bg-black/40 backdrop-blur-2xl border border-white/5 p-6 md:p-10 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden group animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-out flex flex-col items-center">
                     
                     {/* Top Accent Gradient Line */}

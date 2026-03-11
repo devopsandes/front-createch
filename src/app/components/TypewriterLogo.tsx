@@ -37,10 +37,10 @@ export function TypewriterLogo({ isActive }: { isActive?: boolean }) {
     const showUnderline = phase === "underlining" || phase === "pulsing";
 
     return (
-        <div className="flex items-center gap-3 md:gap-4 w-auto">
-            <img src="/logo.png" alt="Createch Logo" className="h-14 md:h-24 w-auto object-contain shrink-0" />
-            <div className={`relative text-white font-black text-2xl md:text-3xl lg:text-4xl tracking-tighter flex flex-col justify-center h-[32px] md:h-[36px] shrink-0 ${pulseClass}`}>
-                <span>{text}</span>
+        <div className="flex items-center gap-2 md:gap-4 w-auto shrink-0">
+            <img src="/logo.png" alt="Createch Logo" className="h-8 md:h-24 w-auto object-contain shrink-0" />
+            <div className={`relative text-white font-black text-[14px] xs:text-lg md:text-3xl lg:text-4xl tracking-tighter flex flex-col justify-center min-w-max shrink-0 ${pulseClass}`}>
+                <span className="whitespace-nowrap">{text}</span>
                 {/* Underline with draw-in animation */}
                 {isActive && showUnderline && (
                     <div className="absolute -bottom-1 left-0 w-full h-[4px]">

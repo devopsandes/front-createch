@@ -57,7 +57,7 @@ export function Header() {
 
     return (
         <header className="sticky top-0 z-50 w-full flex flex-col backdrop-blur-md bg-black/80 border-b border-white/5">
-            <nav className="flex items-center justify-between px-4 py-3 lg:px-12 lg:py-5 shrink-0 relative z-20">
+            <nav className="flex items-center justify-between px-4 py-1 lg:px-12 lg:py-5 shrink-0 relative z-20">
                 <Link href="/" className="flex-shrink-0 flex items-center">
                     <TypewriterLogo isActive={true} />
                 </Link>
@@ -117,7 +117,7 @@ export function Header() {
                             className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors pb-1 text-base font-medium"
                         >
                             <Globe className="w-5 h-5" />
-                            {language === 'es' ? "Argentina" : language === 'en' ? "USA" : "Brasil"}
+                            {language === 'es' ? "Español" : language === 'en' ? "English" : "Portugués"}
                         </button>
 
                         {isLangOpen && (
@@ -126,19 +126,19 @@ export function Header() {
                                     onClick={() => { setLanguage("es"); setIsLangOpen(false); }}
                                     className="text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
-                                    Argentina
+                                    Español
                                 </button>
                                 <button
                                     onClick={() => { setLanguage("en"); setIsLangOpen(false); }}
                                     className="text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
-                                    USA
+                                    English
                                 </button>
                                 <button
                                     onClick={() => { setLanguage("pt"); setIsLangOpen(false); }}
                                     className="text-left px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                                 >
-                                    Brasil
+                                    Portugués
                                 </button>
                             </div>
                         )}
@@ -150,7 +150,7 @@ export function Header() {
             {/* Mobile Sub-Navigation Rows (Always visible on mobile) */}
             <div className="lg:hidden relative">
                 <div 
-                    className="flex overflow-x-auto hide-scrollbar px-6 pb-5 gap-8 scroll-smooth"
+                    className="flex overflow-x-auto hide-scrollbar px-6 pb-4 gap-8 scroll-smooth"
                     style={{ 
                         maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
                         WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
@@ -188,7 +188,7 @@ export function Header() {
                 </div>
                 
                 {/* Swipe Indicator - Simplified & More Subtle */}
-                <div className="absolute right-3 bottom-5 animate-pulse-horizontal pointer-events-none opacity-50 flex flex-col items-center gap-0.5">
+                <div className="absolute right-3 bottom-2 animate-pulse-horizontal pointer-events-none opacity-50 flex flex-col items-center gap-0.5">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>

@@ -179,7 +179,7 @@ export default function ChatWidget() {
         }
         .main-container {
           position: fixed;
-          bottom: 300px;
+          bottom: 130px;
           right: 20px;
           width: 360px;
           height: 480px;
@@ -192,7 +192,7 @@ export default function ChatWidget() {
         }
         @media (min-width: 1024px) {
           .main-container {
-            bottom: 360px;
+            bottom: 110px;
             right: 40px;
             width: 380px;
             height: 520px;
@@ -200,9 +200,9 @@ export default function ChatWidget() {
         }
         @media (max-width: 480px) {
           .main-container {
-            width: calc(100% - 60px); /* Slightly more padding */
-            height: 38vh; /* Reduced from 50vh (~25% reduction) */
-            bottom: 240px;
+            width: calc(100% - 40px);
+            height: 60vh;
+            bottom: 210px;
             right: 20px;
           }
         }
@@ -247,6 +247,17 @@ export default function ChatWidget() {
           backdrop-filter: blur(10px);
           z-index: 10000;
         }
+        @media (max-width: 480px) {
+          .welcome-bubble {
+            right: 75px; 
+            bottom: 130px;
+            font-size: 12px;
+            padding: 8px 12px;
+            white-space: normal;
+            max-width: 150px;
+            text-align: right;
+          }
+        }
         .welcome-bubble::after {
           content: "";
           position: absolute;
@@ -264,10 +275,10 @@ export default function ChatWidget() {
           setShowBubble(false);
         }}
         style={{
-          position: "fixed", 
-          bottom: "210px",
-          right: "40px",
-          width: "100px", 
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          width: "100px",
           height: "100px",
           zIndex: 9999,
           cursor: "pointer",
@@ -287,20 +298,20 @@ export default function ChatWidget() {
         <style>{`
           @media (min-width: 1024px) {
             .chat-trigger-button {
-              bottom: 270px !important;
-              right: 60px !important;
+              bottom: 20px !important;
+              right: 40px !important;
             }
           }
           @media (max-width: 480px) {
              .chat-trigger-button {
-              bottom: 160px !important;
-              right: 20px !important;
-              width: 65px !important;  /* Further reduction */
-              height: 65px !important;
+              bottom: 130px !important;
+              right: 15px !important;
+              width: 75px !important;
+              height: 75px !important;
             }
           }
         `}</style>
-        
+
         {/* Viñeta de Bienvenida */}
         {showBubble && !isOpen && (
           <div className="welcome-bubble">
@@ -309,81 +320,81 @@ export default function ChatWidget() {
         )}
 
         <svg width="100%" height="100%" viewBox="0 0 512 512" style={{ position: "relative", zIndex: 1, overflow: "visible" }}>
-            <defs>
-              <linearGradient id="glassesGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style={{ stopColor: "#2563eb", stopOpacity: 1 }} />
-                <stop offset="100%" style={{ stopColor: "#dc2626", stopOpacity: 1 }} />
-              </linearGradient>
-              
-              <linearGradient id="contourGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style={{ stopColor: "#3b82f6", stopOpacity: 1 }} />
-                <stop offset="100%" style={{ stopColor: "#dc2626", stopOpacity: 1 }} />
-              </linearGradient>
+          <defs>
+            <linearGradient id="glassesGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: "#2563eb", stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: "#dc2626", stopOpacity: 1 }} />
+            </linearGradient>
 
-              <pattern id="shirtParticles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <circle cx="3" cy="3" r="1.5" fill="#4b5563" opacity="0.4" />
-                <circle cx="12" cy="10" r="1" fill="#9ca3af" opacity="0.3" />
-                <circle cx="6" cy="16" r="1.2" fill="#374151" opacity="0.5" />
-                <circle cx="16" cy="5" r="0.8" fill="#ffffff" opacity="0.15" />
-              </pattern>
-            </defs>
+            <linearGradient id="contourGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style={{ stopColor: "#3b82f6", stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: "#dc2626", stopOpacity: 1 }} />
+            </linearGradient>
 
-            {/* Borde de Seguimiento del Contorno */}
-            {!isOpen && (
-              <path 
-                className="neon-contour"
-                d="M102,426 c0,0,0-50,80-100 L182,326 L156,300 V220 c0-55,45-100,100-100 s100,45,100,100 v80 c0,11-10,20-20,20 h-26 L332,326 c80,50,80,100,80,100 v40 H102 Z"
-                fill="none" 
-                stroke="url(#contourGradient)" 
-                strokeWidth="14" 
-                strokeLinecap="round"
-                strokeDasharray="180 320"
-                style={{
-                  animation: "dash-loop 2.5s linear infinite",
-                  filter: "drop-shadow(0 0 10px rgba(37, 99, 235, 1)) drop-shadow(0 0 16px rgba(220, 38, 38, 1))",
-                  transition: "all 0.4s ease"
-                }}
-              />
-            )}
+            <pattern id="shirtParticles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="1.5" fill="#4b5563" opacity="0.4" />
+              <circle cx="12" cy="10" r="1" fill="#9ca3af" opacity="0.3" />
+              <circle cx="6" cy="16" r="1.2" fill="#374151" opacity="0.5" />
+              <circle cx="16" cy="5" r="0.8" fill="#ffffff" opacity="0.15" />
+            </pattern>
+          </defs>
 
-            {/* Cuerpo/Camiseta - Negro/Gris con Partículas */}
-            <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="#111827" />
-            <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="url(#shirtParticles)" />
-            <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="none" stroke="#374151" strokeWidth="12" />
-            
-            {/* Cuello */}
-            <rect x="236" y="300" width="40" height="40" fill="#f1f5f9" />
-            <rect x="236" y="300" width="40" height="40" fill="none" stroke="#94a3b8" strokeWidth="8" />
-
-            {/* Cabeza */}
-            <path d="M156,220c0-55,45-100,100-100s100,45,100,100v80c0,11-10,20-20,20h-160c-11,0-20-9-20-20V220z" fill="#ffffff" />
-            <path d="M156,220c0-55,45-100,100-100s100,45,100,100v80c0,11-10,20-20,20h-160c-11,0-20-9-20-20V220z" fill="none" stroke="#334155" strokeWidth="16" />
-
-            {/* Headset */}
-            <path d="M150,220c0-60,45-108,106-108s106,48,106,108" fill="none" stroke="#1e293b" strokeWidth="12" />
-            <rect x="120" y="200" width="40" height="60" rx="10" fill="#334155" />
-            <rect x="352" y="200" width="40" height="60" rx="10" fill="#334155" />
-            
-            {/* Micrófono */}
-            <path d="M372,250 c0,40-60,40-100,40" fill="none" stroke="#1e293b" strokeWidth="10" strokeLinecap="round" />
-            <circle cx="265" cy="290" r="8" fill="#0f172a" />
-
-            {/* Lentes de Oficina */}
-            <g transform="translate(165, 185)">
-                <rect x="0" y="0" width="80" height="55" rx="8" fill="url(#glassesGradient)" stroke="#000000" strokeWidth="8" />
-                <rect x="102" y="0" width="80" height="55" rx="8" fill="url(#glassesGradient)" stroke="#000000" strokeWidth="8" />
-                <path d="M80,25 q11,-15 22,0" fill="none" stroke="#000000" strokeWidth="8" strokeLinecap="round" />
-                <line x1="-15" y1="20" x2="0" y2="20" stroke="#000000" strokeWidth="8" />
-                <line x1="182" y1="20" x2="197" y2="20" stroke="#000000" strokeWidth="8" />
-            </g>
-
-            <path 
-              d="M226,275 q30,15 60,0" 
-              fill="none" 
-              stroke="#334155" 
-              strokeWidth="6" 
-              strokeLinecap="round" 
+          {/* Borde de Seguimiento del Contorno */}
+          {!isOpen && (
+            <path
+              className="neon-contour"
+              d="M102,426 c0,0,0-50,80-100 L182,326 L156,300 V220 c0-55,45-100,100-100 s100,45,100,100 v80 c0,11-10,20-20,20 h-26 L332,326 c80,50,80,100,80,100 v40 H102 Z"
+              fill="none"
+              stroke="url(#contourGradient)"
+              strokeWidth="14"
+              strokeLinecap="round"
+              strokeDasharray="180 320"
+              style={{
+                animation: "dash-loop 2.5s linear infinite",
+                filter: "drop-shadow(0 0 10px rgba(37, 99, 235, 1)) drop-shadow(0 0 16px rgba(220, 38, 38, 1))",
+                transition: "all 0.4s ease"
+              }}
             />
+          )}
+
+          {/* Cuerpo/Camiseta - Negro/Gris con Partículas */}
+          <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="#111827" />
+          <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="url(#shirtParticles)" />
+          <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="none" stroke="#374151" strokeWidth="12" />
+
+          {/* Cuello */}
+          <rect x="236" y="300" width="40" height="40" fill="#f1f5f9" />
+          <rect x="236" y="300" width="40" height="40" fill="none" stroke="#94a3b8" strokeWidth="8" />
+
+          {/* Cabeza */}
+          <path d="M156,220c0-55,45-100,100-100s100,45,100,100v80c0,11-10,20-20,20h-160c-11,0-20-9-20-20V220z" fill="#ffffff" />
+          <path d="M156,220c0-55,45-100,100-100s100,45,100,100v80c0,11-10,20-20,20h-160c-11,0-20-9-20-20V220z" fill="none" stroke="#334155" strokeWidth="16" />
+
+          {/* Headset */}
+          <path d="M150,220c0-60,45-108,106-108s106,48,106,108" fill="none" stroke="#1e293b" strokeWidth="12" />
+          <rect x="120" y="200" width="40" height="60" rx="10" fill="#334155" />
+          <rect x="352" y="200" width="40" height="60" rx="10" fill="#334155" />
+
+          {/* Micrófono */}
+          <path d="M372,250 c0,40-60,40-100,40" fill="none" stroke="#1e293b" strokeWidth="10" strokeLinecap="round" />
+          <circle cx="265" cy="290" r="8" fill="#0f172a" />
+
+          {/* Lentes de Oficina */}
+          <g transform="translate(165, 185)">
+            <rect x="0" y="0" width="80" height="55" rx="8" fill="url(#glassesGradient)" stroke="#000000" strokeWidth="8" />
+            <rect x="102" y="0" width="80" height="55" rx="8" fill="url(#glassesGradient)" stroke="#000000" strokeWidth="8" />
+            <path d="M80,25 q11,-15 22,0" fill="none" stroke="#000000" strokeWidth="8" strokeLinecap="round" />
+            <line x1="-15" y1="20" x2="0" y2="20" stroke="#000000" strokeWidth="8" />
+            <line x1="182" y1="20" x2="197" y2="20" stroke="#000000" strokeWidth="8" />
+          </g>
+
+          <path
+            d="M226,275 q30,15 60,0"
+            fill="none"
+            stroke="#334155"
+            strokeWidth="6"
+            strokeLinecap="round"
+          />
         </svg>
 
       </div>
@@ -409,51 +420,51 @@ export default function ChatWidget() {
                 display: "flex", alignItems: "center", gap: "12px",
                 backdropFilter: "blur(20px)"
               }}>
-                 <div style={{
-                   width: "36px", height: "36px", borderRadius: "4px", background: "rgba(37,99,235,0.1)",
-                   display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(59,130,246,0.3)",
-                   overflow: "hidden"
-                 }}>
-                    <svg width="28" height="28" viewBox="0 0 512 512">
-                        <defs>
-                          <pattern id="shirtParticlesSmall" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                            <circle cx="10" cy="10" r="4" fill="#ffffff" opacity="0.2" />
-                          </pattern>
-                        </defs>
-                        {/* Cuerpo simplificado */}
-                        <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="#111827" />
-                        <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="url(#shirtParticlesSmall)" />
-                        {/* Cabeza */}
-                        <path d="M156,220c0-55,45-100,100-100s100,45,100,100v80c0,11-10,20-20,20h-160c-11,0-20-9-20-20V220z" fill="#ffffff" />
-                        {/* Lentes */}
-                        <g transform="translate(165, 185)">
-                            <rect x="0" y="0" width="80" height="55" rx="8" fill="#2563eb" />
-                            <rect x="102" y="0" width="80" height="55" rx="8" fill="#2563eb" />
-                        </g>
-                    </svg>
-                 </div>
-                 <div style={{ flex: 1 }}>
-                    <div style={{ color: "white", fontWeight: "900", fontSize: "14px", letterSpacing: "0.8px", textTransform: "uppercase" }}>Asistente Createch</div>
-                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                      <span style={{ width: "8px", height: "8px", background: "#22c55e", borderRadius: "50%", boxShadow: "0 0 12px #22c55e" }} />
-                      <span style={{ fontSize: "10px", color: "#4ade80", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "1px" }}>Online</span>
-                    </div>
-                 </div>
-                 <button onClick={() => setIsOpen(false)} style={{ background: "none", border: "none", color: "white", opacity: 0.5, cursor: "pointer", padding: "4px" }}>
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                        <line x1="18" y1="6" x2="6" y2="18" />
-                        <line x1="6" y1="6" x2="18" y2="18" />
-                    </svg>
-                 </button>
+                <div style={{
+                  width: "36px", height: "36px", borderRadius: "4px", background: "rgba(37,99,235,0.1)",
+                  display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(59,130,246,0.3)",
+                  overflow: "hidden"
+                }}>
+                  <svg width="28" height="28" viewBox="0 0 512 512">
+                    <defs>
+                      <pattern id="shirtParticlesSmall" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="10" cy="10" r="4" fill="#ffffff" opacity="0.2" />
+                      </pattern>
+                    </defs>
+                    {/* Cuerpo simplificado */}
+                    <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="#111827" />
+                    <path d="M102,426c0,0,0-50,80-100h150c80,50,80,100,80,100v40H102V426z" fill="url(#shirtParticlesSmall)" />
+                    {/* Cabeza */}
+                    <path d="M156,220c0-55,45-100,100-100s100,45,100,100v80c0,11-10,20-20,20h-160c-11,0-20-9-20-20V220z" fill="#ffffff" />
+                    {/* Lentes */}
+                    <g transform="translate(165, 185)">
+                      <rect x="0" y="0" width="80" height="55" rx="8" fill="#2563eb" />
+                      <rect x="102" y="0" width="80" height="55" rx="8" fill="#2563eb" />
+                    </g>
+                  </svg>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <div style={{ color: "white", fontWeight: "900", fontSize: "14px", letterSpacing: "0.8px", textTransform: "uppercase" }}>Asistente Createch</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                    <span style={{ width: "8px", height: "8px", background: "#22c55e", borderRadius: "50%", boxShadow: "0 0 12px #22c55e" }} />
+                    <span style={{ fontSize: "10px", color: "#4ade80", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "1px" }}>Online</span>
+                  </div>
+                </div>
+                <button onClick={() => setIsOpen(false)} style={{ background: "none", border: "none", color: "white", opacity: 0.5, cursor: "pointer", padding: "4px" }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
               </div>
 
               {/* Chat Area */}
-              <div className="custom-scrollbar" style={{ 
-                flex: 1, 
-                overflowY: "auto", 
-                padding: "20px", 
-                display: "flex", 
-                flexDirection: "column", 
+              <div className="custom-scrollbar" style={{
+                flex: 1,
+                overflowY: "auto",
+                padding: "20px",
+                display: "flex",
+                flexDirection: "column",
                 gap: "16px",
                 background: "transparent"
               }}>
@@ -507,8 +518,8 @@ export default function ChatWidget() {
                     }}
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13" />
-                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
                     </svg>
                   </button>
                 </div>
