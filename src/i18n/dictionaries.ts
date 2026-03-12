@@ -25,7 +25,7 @@ export const dictionaries = {
                 { prefix: "Createch impulsa tu ", word: "evolución" },
                 { prefix: "Automatizá con ", word: "CreaSales" },
                 { prefix: "CreaSales transforma tu ", word: "gestión" },
-                { prefix: "Gestión inteligente, resultados ", word: "reales" },
+                { prefix: "Gestión inteligente, ", word: "resultados reales" },
                 { prefix: "Tu empresa, más ", word: "inteligente" },
                 { prefix: "Juntos impulsamos tu ", word: "crecimiento" },
                 { prefix: "Escalá con inteligencia ", word: "artificial" }
