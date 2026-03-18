@@ -54,7 +54,7 @@ export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "¡Hola! ¿En qué puedo ayudarte hoy?" },
+    
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
