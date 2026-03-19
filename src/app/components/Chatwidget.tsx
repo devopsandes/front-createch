@@ -237,37 +237,49 @@ export default function ChatWidget() {
       {/* Activador */}
       <div
         onClick={() => { setIsOpen((v) => !v); setShowBubble(false); }}
-        style={{ position: "fixed", bottom: "20px", right: "20px", width: "100px", height: "100px", zIndex: 9999, cursor: "pointer", transition: "all 0.5s cubic-bezier(0.175,0.885,0.32,1.275)", display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{ 
+          position: "fixed", 
+          bottom: "20px", 
+          right: "20px", 
+          width: "100px", 
+          height: "100px", 
+          zIndex: 9999, 
+          cursor: "pointer", 
+          transition: "all 0.5s cubic-bezier(0.175,0.885,0.32,1.275)", 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "center" 
+        }}
         className="chat-trigger-button"
         onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.15)"; }}
         onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
       >
         <style>{`
-          /* Desktop grande (1024px+) - Logo arriba de la última tarjeta */
-          @media (min-width: 1024px) { 
+          /* Desktop y Tablet - Mantener arriba de la última tarjeta */
+          @media (min-width: 768px) { 
             .chat-trigger-button { 
-              bottom: 140px !important; 
-              right: 40px !important; 
+              bottom: 25vh !important;  /* 25% del viewport height */
+              right: 4vw !important;    /* 3% del viewport width */
             } 
           }
           
-          /* Tablet y resoluciones medias (768px - 1023px) - Mantener posición */
-          @media (min-width: 768px) and (max-width: 1023px) { 
+          /* Ajuste para pantallas muy anchas */
+          @media (min-width: 1440px) { 
             .chat-trigger-button { 
-              bottom: 140px !important; 
-              right: 30px !important; 
+              bottom: 25vh !important;
+              right: 2vw !important;
             } 
           }
-          
-          /* Mobile (menos de 768px) - Posición móvil */
+                /* Mobile */
           @media (max-width: 767px) { 
             .chat-trigger-button { 
-              bottom: 130px !important; 
-              right: 15px !important; 
-              width: 75px !important; 
-              height: 75px !important; 
-            } 
-          }
+             bottom: 80px !important; 
+             right: 15px !important; 
+             width: 75px !important; 
+             height: 75px !important; 
+           } 
+         }
+  
         `}</style>
         {showBubble && !isOpen && (
           <div className="welcome-bubble">¡Bienvenido! Puedes consultarme aquí</div>
