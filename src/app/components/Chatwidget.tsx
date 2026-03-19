@@ -243,10 +243,32 @@ export default function ChatWidget() {
         onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
       >
         <style>{`
-          @media (min-width: 1024px) { .chat-trigger-button { bottom: 250px !important; right: 40px !important; } }
-          @media (max-width: 480px) { .chat-trigger-button { bottom: 130px !important; right: 15px !important; width: 75px !important; height: 75px !important; } }
+          /* Desktop grande (1024px+) - Logo arriba de la última tarjeta */
+          @media (min-width: 1024px) { 
+            .chat-trigger-button { 
+              bottom: 140px !important; 
+              right: 40px !important; 
+            } 
+          }
+          
+          /* Tablet y resoluciones medias (768px - 1023px) - Mantener posición */
+          @media (min-width: 768px) and (max-width: 1023px) { 
+            .chat-trigger-button { 
+              bottom: 140px !important; 
+              right: 30px !important; 
+            } 
+          }
+          
+          /* Mobile (menos de 768px) - Posición móvil */
+          @media (max-width: 767px) { 
+            .chat-trigger-button { 
+              bottom: 130px !important; 
+              right: 15px !important; 
+              width: 75px !important; 
+              height: 75px !important; 
+            } 
+          }
         `}</style>
-
         {showBubble && !isOpen && (
           <div className="welcome-bubble">¡Bienvenido! Puedes consultarme aquí</div>
         )}
