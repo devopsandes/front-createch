@@ -18,5 +18,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === '' ? 1 : 0.8,
     }))
 
-    return routes
+    const legales = [
+        '/legales',
+        '/legales/privacidad',
+        '/legales/terminos',
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        changeFrequency: 'yearly' as const,
+        priority: 0.3,
+    }))
+
+    return [...routes, ...legales]
 }

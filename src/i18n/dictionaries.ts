@@ -132,7 +132,9 @@ export const dictionaries = {
             description: "Somos una empresa especializada en optimización de procesos mediante IA. Trabajamos sobre el núcleo operativo de las organizaciones: ventas, atención al cliente, cobranzas y gestión interna. Intervenimos donde la eficiencia impacta directamente en los resultados. Fusionamos experiencia en entornos corporativos con capacidad técnica para desarrollar, integrar y escalar soluciones en tiempos ágiles. Nuestro enfoque es claro: transformar operaciones en estructuras eficientes, medibles y listas para crecer."
         },
         footer: {
-            rights: "© 2026 Createch. Todos los derechos reservados."
+            rights: "© 2026 Createch. Todos los derechos reservados.",
+            privacyPolicy: "Política de Privacidad",
+            terms: "Términos y Condiciones"
         }
     },
     en: {
@@ -268,7 +270,9 @@ export const dictionaries = {
             description: "At Createch, we are a passionate team driven by technology and innovation. We specialize in transforming how businesses operate, leveraging artificial intelligence and custom software solutions to scale results and achieve smart management."
         },
         footer: {
-            rights: "© 2026 Createch. All rights reserved."
+            rights: "© 2026 Createch. All rights reserved.",
+            privacyPolicy: "Privacy Policy",
+            terms: "Terms and Conditions"
         }
     },
     pt: {
@@ -404,7 +408,9 @@ export const dictionaries = {
             description: "Na Createch, somos uma equipe apaixonada pela tecnologia e inovação. Somos especializados em transformar a maneira como as empresas operam, utilizando inteligência artificial e soluções de software sob medida para escalar resultados e alcançar uma gestão inteligente."
         },
         footer: {
-            rights: "© 2026 Createch. Todos os direitos reservados."
+            rights: "© 2026 Createch. Todos os direitos reservados.",
+            privacyPolicy: "Política de Privacidade",
+            terms: "Termos e Condições"
         }
     }
 };
