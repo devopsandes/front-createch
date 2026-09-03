@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://createch.com.ar/sitemap.xml',
+        sitemap: 'https://creasales.com/sitemap.xml',
     }
 }

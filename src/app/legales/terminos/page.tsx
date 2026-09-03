@@ -23,8 +23,8 @@ export default function TerminosCondiciones() {
                 </p>
                 <p className="mt-6 text-xs text-gray-500 italic border-l-2 border-white/10 pl-4">
                     Documento oficial en español. Traducciones no oficiales bajo pedido a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        contact@createch.com.ar
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        contact@creasales.com
                     </a>
                     .
                 </p>
@@ -33,7 +33,7 @@ export default function TerminosCondiciones() {
             <section>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mt-12 mb-4">1. Aceptación</h2>
                 <p className="mb-4">
-                    El acceso y uso del sitio web <strong className="text-white">https://www.createch.com.ar</strong> y de los canales
+                    El acceso y uso del sitio web <strong className="text-white">https://www.creasales.com</strong> y de los canales
                     de contacto de <strong className="text-white">Crea Tech S.A.S.</strong>, CUIT{" "}
                     <strong className="text-white">30-71918562-9</strong>, con domicilio en{" "}
                     <strong className="text-white">Avenida San Martín 779, Ciudad de Mendoza, Argentina</strong> (en adelante,
@@ -257,8 +257,8 @@ export default function TerminosCondiciones() {
             <section>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mt-12 mb-4">15. Contacto</h2>
                 <p className="mb-2">
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>
                 </p>
                 <p>Avenida San Martín 779, Ciudad de Mendoza, Argentina</p>

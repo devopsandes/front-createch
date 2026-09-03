@@ -24,8 +24,8 @@ export default function PoliticaPrivacidad() {
                 </p>
                 <p className="mt-6 text-xs text-gray-500 italic border-l-2 border-white/10 pl-4">
                     Documento oficial en español. Traducciones no oficiales bajo pedido a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        contact@createch.com.ar
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        contact@creasales.com
                     </a>
                     .
                 </p>
@@ -43,7 +43,7 @@ export default function PoliticaPrivacidad() {
                 <p className="mb-4">Esta política aplica a:</p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li>
-                        El sitio web <strong className="text-white">https://www.createch.com.ar</strong> y todos sus subdominios.
+                        El sitio web <strong className="text-white">https://www.creasales.com</strong> y todos sus subdominios.
                     </li>
                     <li>Los formularios de contacto y solicitud de información.</li>
                     <li>Los canales de atención de Createch por WhatsApp, correo electrónico y redes sociales.</li>
@@ -83,24 +83,24 @@ export default function PoliticaPrivacidad() {
                                 <td className="py-3 px-4 font-semibold text-white bg-white/5">Correo de contacto</td>
                                 <td className="py-3 px-4">
                                     <a
-                                        href="mailto:contact@createch.com.ar"
+                                        href="mailto:contact@creasales.com"
                                         className="text-blue-400 hover:text-blue-300 underline"
                                     >
-                                        contact@createch.com.ar
+                                        contact@creasales.com
                                     </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td className="py-3 px-4 font-semibold text-white bg-white/5">Sitio web</td>
-                                <td className="py-3 px-4">https://www.createch.com.ar</td>
+                                <td className="py-3 px-4">https://www.creasales.com</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <p className="mt-6">
                     Toda consulta, reclamo o ejercicio de derechos vinculado a datos personales debe dirigirse a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>
                     .
                 </p>
@@ -348,8 +348,8 @@ export default function PoliticaPrivacidad() {
                 </ol>
                 <p>
                     Para ejercer cualquiera de estos derechos:{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>
                     .
                 </p>
@@ -517,8 +517,8 @@ export default function PoliticaPrivacidad() {
                 <p>
                     Usted puede solicitar la baja de las comunicaciones respondiendo <strong className="text-white">BAJA</strong> en
                     la conversación de WhatsApp, o escribiendo a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>
                     . La solicitud se procesa dentro de las 48 horas hábiles.
                 </p>
@@ -598,8 +598,8 @@ export default function PoliticaPrivacidad() {
                 </ul>
                 <p>
                     Usted puede solicitar información sobre las garantías aplicadas escribiendo a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>
                     .
                 </p>
@@ -677,8 +677,8 @@ export default function PoliticaPrivacidad() {
                 <h3 className="text-xl font-semibold text-white mt-8 mb-3">15.1. Cómo ejercer sus derechos</h3>
                 <p className="mb-3">
                     Envíe su solicitud a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>{" "}
                     indicando:
                 </p>
@@ -733,8 +733,8 @@ export default function PoliticaPrivacidad() {
                     Si detectamos que hemos recolectado datos de un menor sin autorización de sus representantes legales, los
                     eliminaremos de inmediato. Si usted es padre, madre o tutor y considera que un menor a su cargo nos proporcionó
                     datos, escriba a{" "}
-                    <a href="mailto:contact@createch.com.ar" className="text-blue-400 hover:text-blue-300 underline">
-                        <strong>contact@createch.com.ar</strong>
+                    <a href="mailto:contact@creasales.com" className="text-blue-400 hover:text-blue-300 underline">
+                        <strong>contact@creasales.com</strong>
                     </a>
                     .
                 </p>

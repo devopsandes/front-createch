@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://createch.com.ar'
+    const baseUrl = 'https://creasales.com'
 
     const routes = [
         '',
